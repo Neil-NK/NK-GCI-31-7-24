@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactions</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>           <!-- Placeholder for navbar -->
+    <!-- Page content goes here -->
+</div>
+
+<script src="navbar.js"></script>               <!-- Include the navbar script -->
+
+        <a href="create-project.html" class="btn btn-primary mt-3">Create New Project</a> <!-- link does not exist)-->
+        
+    </div>
+
+    <script>
+        document.getElementById('supportTicketForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => data[key] = value);
+
+            const response = await fetch('/support-tickets', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            const messageDiv = document.getElementById('message');
+            if (response.ok) {
+                messageDiv.innerHTML = '<div class="alert alert-success">Support ticket successfully created!</div>';
+                form.reset();
+            } else {
+                messageDiv.innerHTML = '<div class="alert alert-danger">Failed to create support ticket.</div>';
+            }
+        });
+    </script>
+</body>
+</html>

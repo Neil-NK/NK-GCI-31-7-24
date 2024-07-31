@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Add a style tag to allow the button and search to sit next to each other -->
+    <style>
+        .search-and-button {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .search-and-button .form-control {
+            flex: 1;
+            margin-left: 15px; /* Space between the button and the input */
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div> <!-- Placeholder for navbar -->
+    <!-- Page content goes here -->
+
+    <div class="container mt-4">
+        <h1>Users</h1>
+        <div class="search-and-button">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#userModal">Add New User</button>
+            <input type="text" id="searchInput" class="form-control" placeholder="Search for users..." onkeyup="filterUsers()">
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="usersTableBody">
+                <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="navbar.js"></script>
+    
+    <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userModalLabel">Add New User</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="userForm">
+                        <input type="hidden" id="userID">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="text" class="form-control" id="phone" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetchUsers();
+
+            document.getElementById('userForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                const userID = document.getElementById('userID').value;
+                const firstName = document.getElementById('firstName').value;
+                const lastName = document.getElementById('lastName').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                
+                const data = { firstName, lastName, email, phone };
+
+                const method = userID ? 'PUT' : 'POST';
+                const url = userID ? `/users/${userID}` : '/users';
+
+                fetch(url, {
+                    method,
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                }).then(response => response.json())
+                .then(result => {
+                    if (result.success) {
+                        $('#userModal').modal('hide');
+                        fetchUsers();
+                    } else {
+                        alert('Error saving user');
+                    }
+                });
+            });
+        });
+
+        function fetchUsers() {
+            fetch('/users')
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.getElementById('usersTableBody');
+                    tableBody.innerHTML = '';
+                    data.forEach(user => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${user.userID}</td>
+                            <td>${user.firstName}</td>
+                            <td>${user.lastName}</td>
+                            <td>${user.email}</td>
+                            <td>${user.phone}</td>
+                            <td>
+                                <button class="btn btn-sm btn-warning" onclick="editUser(${user.userID})">Edit</button>
+                                <button class="btn btn-sm btn-danger" onclick="deleteUser(${user.userID})">Delete</button>
+                            </td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                });
+        }
+
+        function filterUsers() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const table = document.getElementById('usersTableBody');
+            const tr = table.getElementsByTagName('tr');
+
+            for (let i = 0; i < tr.length; i++) {
+                const tdArray = tr[i].getElementsByTagName('td');
+                let rowContainsFilter = false;
+
+                for (let j = 0; j < tdArray.length - 1; j++) {
+                    const td = tdArray[j];
+                    if (td) {
+                        const txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            rowContainsFilter = true;
+                            break;
+                        }
+                    }
+                }
+
+                tr[i].style.display = rowContainsFilter ? '' : 'none';
+            }
+        }
+
+        function editUser(userID) {
+            fetch(`/users/${userID}`)
+                .then(response => response.json())
+                .then(user => {
+                    document.getElementById('userID').value = user.userID;
+                    document.getElementById('firstName').value = user.firstName;
+                    document.getElementById('lastName').value = user.lastName;
+                    document.getElementById('email').value = user.email;
+                    document.getElementById('phone').value = user.phone;
+                    $('#userModal').modal('show');
+                });
+        }
+
+        function deleteUser(userID) {
+            if (confirm('Are you sure you want to delete this user?')) {
+                fetch(`/users/${userID}`, {
+                    method: 'DELETE'
+                }).then(response => response.json())
+                .then(result => {
+                    if (result.success) {
+                        fetchUsers();
+                    } else {
+                        alert('Error deleting user');
+                    }
+                });
+            }
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

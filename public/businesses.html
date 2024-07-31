@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>           <!-- Placeholder for navbar -->
+    <!-- Page content goes here -->
+</div>
+
+<script src="navbar.js"></script>               <!-- Include the navbar script -->
+
+<body>
+        <a href="create-contact.html" class="btn btn-primary mt-3">New Contact</a>
+        <table class="table table-bordered mt-3">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Contact ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody id="clientList">
+                <!-- Clients will be populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.getElementById('createEntityForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => data[key] = value);
+
+            const response = await fetch('/create-entity', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                alert('Entity created successfully!');
+                form.reset();
+            } else {
+                alert('Failed to create entity.');
+            }
+        });
+    </script>
+</body>
+</html>
