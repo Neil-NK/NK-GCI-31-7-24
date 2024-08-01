@@ -3,56 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
+    <title>Businesses</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Add a style tag to allow the button and search to sit next to each other -->
+    <style>
+        .search-and-button {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .search-and-button .form-control {
+            flex: 1;
+            margin-left: 15px; /* Space between the button and the input */
+        }
+    </style>
 </head>
 
+
 <body>
-    <div id="navbar-container"></div>           <!-- Placeholder for navbar -->
+    <div id="navbar-container"></div> <!-- Placeholder for navbar -->
     <!-- Page content goes here -->
-</div>
 
-<script src="navbar.js"></script>               <!-- Include the navbar script -->
-
-<body>
-        <a href="create-contact.html" class="btn btn-primary mt-3">New Contact</a>
-        <table class="table table-bordered mt-3">
-            <thead class="thead-dark">
+    
+    <div class="container mt-4">
+        <h1>Businesses</h1>
+        <div class="search-and-button">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#businessModal">Add New Business</button>
+            <input type="text" id="searchInput" class="form-control" placeholder="Search for businessess..." onkeyup="filterBusinesses()">
+        </div>
+        <table class="table table-bordered">
+            <thead>
                 <tr>
-                    <th>Contact ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
+                    <th>ID</th>
+                    <th>Business Name</th>
+                    <th>Contact Type</th>
+                    <!-- <th>Contact Date</th> -->
+                    <th>Notes</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
-            <tbody id="clientList">
-                <!-- Clients will be populated here -->
+            <tbody id="businessesTableBody">
+                <!-- Data will be inserted here -->
             </tbody>
         </table>
     </div>
+    <script src="navbar.js"></script>
+
+    <!-- this is a button for adding a new business -->
+    <div class="modal fade" id="businessModal" tabindex="-1" role="dialog" aria-labelledby="businessModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="businessModalLabel">Add New Business</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="businessForm">
+                        <input type="hidden" id="businessID">
+                        <div class="form-group">
+                            <label for="Business Name">Business Name</label>
+                            <input type="text" class="form-control" id="businessName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactType">Contact Type</label>
+                            <input type="text" class="form-control" id="contactType" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">notes</label>
+                            <input type="text" class="form-control" id="notes" required>
+                        </div>
+                        <!-- need to hide this form part, but auto add a date entered as today-->
+                        <!-- <div class="form-group">
+                            <label for="createdAt">Created At</label>
+                            <input type="text" class="form-control" id="createdAt" required>
+                        </div> -->
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
-        document.getElementById('createEntityForm').addEventListener('submit', async function(event) {
-            event.preventDefault();
-            const form = event.target;
-            const formData = new FormData(form);
-            const data = {};
-            formData.forEach((value, key) => data[key] = value);
+        document.addEventListener('DOMContentLoaded', function () {
+            fetchBusinesses();
 
-            const response = await fetch('/create-entity', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
+            document.getElementById('businessForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                const businessID = document.getElementById('businessID').value;
+                const businessName = document.getElementById('businessName').value;
+                const contactType = document.getElementById('contactType').value;
+                const notes = document.getElementById('notes').value;
+                // const createdAt = document.getElementById('createdAt').value;
+                
+                const data = { businessName, contactType, notes };
+
+                const method = businessID ? 'PUT' : 'POST';
+                const url = businessID ? `/Businesses/${businessID}` : '/businesses';
+
+                fetch(url, {
+                    method,
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                }).then(response => response.json())
+                .then(result => {
+                    if (result.success) {
+                        $('#businessModal').modal('hide');
+                        fetchBusinesses();
+                    } else {
+                        alert('Error saving business');
+                    }
+                });
             });
-
-            if (response.ok) {
-                alert('Entity created successfully!');
-                form.reset();
-            } else {
-                alert('Failed to create entity.');
-            }
         });
+
+        function fetchBusinesses() {
+            fetch('/businesses')
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.getElementById('businessesTableBody');
+                    tableBody.innerHTML = '';
+                    data.forEach(business => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${business.businessID}</td>
+                            <td>${business.businessName}</td>
+                            <td>${business.contactType}</td>
+                            <td>${business.notes}</td>
+                            <td>
+                                <button class="btn btn-sm btn-warning" onclick="editBusiness(${business.businessID})">Edit</button>
+                                <button class="btn btn-sm btn-danger" onclick="deleteBusiness(${business.businessID})">Delete</button>
+                            </td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                });
+        }
+
+        function filterBusinesses() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const table = document.getElementById('businessesTableBody');
+            const tr = table.getElementsByTagName('tr');
+
+            for (let i = 0; i < tr.length; i++) {
+                const tdArray = tr[i].getElementsByTagName('td');
+                let rowContainsFilter = false;
+
+                for (let j = 0; j < tdArray.length - 1; j++) {
+                    const td = tdArray[j];
+                    if (td) {
+                        const txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            rowContainsFilter = true;
+                            break;
+                        }
+                    }
+                }
+
+                tr[i].style.display = rowContainsFilter ? '' : 'none';
+            }
+        }
+
+        function editBusiness(businessID) {
+            fetch(`/Business/${businessID}`)
+                .then(response => response.json())
+                .then(business => {
+                    document.getElementById('businessID').value = business.businessID;
+                    document.getElementById('businessName').value = business.businessName;
+                    document.getElementById('contactType').value = business.contactType;
+                    document.getElementById('notes').value = business.notes;
+                    $('#businessModal').modal('show');
+                });
+        }
+
+        function deleteBusiness(businessID) {
+            if (confirm('Are you sure you want to delete this business?')) {
+                fetch(`/Business/${businessID}`, {
+                    method: 'DELETE'
+                }).then(response => response.json())
+                .then(result => {
+                    if (result.success) {
+                        fetchBusinesses();
+                    } else {
+                        alert('Error deleting business');
+                    }
+                });
+            }
+        }
     </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
