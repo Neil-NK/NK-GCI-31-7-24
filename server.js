@@ -92,6 +92,7 @@ const insertDummyUserData = () => {
     username, password, role, createdAt
   ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`);
   
+  // add code to read from CSV file and insert into the database
   for (let i = 1; i <= 5000; i++) {
     stmt.run(
       `First${i}`, `Last${i}`, `email${i}@example.com`, `1234567890`, `Address${i}`,
