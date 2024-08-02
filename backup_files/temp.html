@@ -19,7 +19,10 @@
     </style>
 </head>
 <body>
+
+
     <div id="navbar-container"></div> <!-- Placeholder for navbar -->
+
 
     <div class="container mt-4">
         <h1>Users</h1>
@@ -29,7 +32,53 @@
             <button class="btn btn-secondary" onclick="addSmallDummyUserData()">Add Small Dummy User Data</button>
             <button class="btn btn-secondary" onclick="deleteAllUserData()">Delete All User Data</button>
         </div>
+        
+        <script>
+            // Add Dummy User Data
+            function addDummyUserData() {
+                fetch('/addDummyUserData', { method: 'POST' })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert('Dummy user data added successfully.');
+                            fetchUsers();
+                        } else {
+                            alert('Error adding dummy user data.');
+                        }
+                    });
+            }
 
+            // Add Small Dummy User Data
+                function addSmallDummyUserData() {
+                    fetch('/addSmallDummyUserData', { method: 'POST' })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                alert('Small dummy user data added successfully.');
+                                fetchUsers();
+                            } else {
+                                alert('Error adding small dummy user data.');
+                            }
+                        });
+}
+        
+            // Delete All User Data
+            function deleteAllUserData() {
+                if (confirm('Are you sure you want to delete all user data?')) {
+                    fetch('/Users', { method: 'DELETE' })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                alert('All user data deleted successfully.');
+                                fetchUsers();
+                            } else {
+                                alert('Error deleting user data.');
+                            }
+                        });
+                }
+            }
+        </script>
+        
         <div class="search-and-button">
             <button class="btn btn-primary" data-toggle="modal" data-target="#userModal">Add New User</button>
             <input type="text" id="searchInput" class="form-control" placeholder="Search for users..." onkeyup="filterUsers()">
@@ -43,8 +92,8 @@
                     <th>Last Name</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>Business Name</th>
-                    <th>Department Name</th>
+                    <th>Business Name</th> <!-- New Column -->
+                    <th>Department Name</th> <!-- New Column -->
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -201,48 +250,6 @@
                         alert('Error deleting user');
                     }
                 });
-            }
-        }
-
-        // Functions for dummy data
-        function addDummyUserData() {
-            fetch('/addDummyUserData', { method: 'POST' })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert('Dummy user data added successfully - please wait a few seconds to see refreshed page.');
-                        fetchUsersWithBusiness();
-                    } else {
-                        alert('Error adding dummy user data.');
-                    }
-                });
-        }
-
-        function addSmallDummyUserData() {
-            fetch('/addSmallDummyUserData', { method: 'POST' })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert('Small dummy user data added successfully - please wait a few seconds to see refreshed page.');
-                        fetchUsersWithBusiness();
-                    } else {
-                        alert('Error adding small dummy user data.');
-                    }
-                });
-        }
-
-        function deleteAllUserData() {
-            if (confirm('Are you sure you want to delete all user data?')) {
-                fetch('/Users', { method: 'DELETE' })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            alert('All user data deleted successfully.');
-                            fetchUsersWithBusiness();
-                        } else {
-                            alert('Error deleting user data.');
-                        }
-                    });
             }
         }
     </script>

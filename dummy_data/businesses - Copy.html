@@ -6,6 +6,7 @@
     <title>Businesses</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Add a style tag to allow the button and search to sit next to each other -->
     <style>
         .search-and-button {
             display: flex;
@@ -18,30 +19,85 @@
         }
     </style>
 </head>
+
+
 <body>
     <div id="navbar-container"></div> <!-- Placeholder for navbar -->
-
+    <!-- Page content goes here -->
+    
     <div class="container mt-4">
         <h1>Businesses</h1>
 
-        <div class="admin-section mb-4">
-            <h3>Admin Actions</h3>
-            <button class="btn btn-secondary" onclick="addDummyBusinessData()">Add Dummy Business Data</button>
-            <button class="btn btn-secondary" onclick="addSmallDummyBusinessData()">Add Small Dummy Business Data</button>
-            <button class="btn btn-secondary" onclick="deleteAllBusinessData()">Delete All Business Data</button>
-        </div>
+        <div class="container mt-4">
+            <h1>Businesses</h1>
+            <div class="admin-section mb-4">
+                <h3>Admin Actions</h3>
+                <button class="btn btn-secondary" onclick="addDummyBusinessData()">Add Dummy Business Data</button>
+                <button class="btn btn-secondary" onclick="addSmallDummyBusinessData()">Add Small Dummy Business Data</button>
+                <button class="btn btn-secondary" onclick="deleteAllBusinessData()">Delete All Business Data</button>
+            </div>
+          </div>
+        
+        <script>
+            // Add Dummy Business Data
+            function addDummyBusinessData() {
+                fetch('/addDummyBusinessData', { method: 'POST' })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert('Dummy business data added successfully.');
+                            fetchBusinesses();
+                        } else {
+                            alert('Error adding dummy business data.');
+                        }
+                    });
+            }
+
+            // Add Small Dummy Business Data
+function addSmallDummyBusinessData() {
+    fetch('/addSmallDummyBusinessData', { method: 'POST' })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Small dummy business data added successfully.');
+                fetchBusinesses();
+            } else {
+                alert('Error adding small dummy business data.');
+            }
+        });
+}
+
+        
+            // Delete All Business Data
+            function deleteAllBusinessData() {
+                if (confirm('Are you sure you want to delete all business data?')) {
+                    fetch('/Businesses', { method: 'DELETE' })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                alert('All business data deleted successfully.');
+                                fetchBusinesses();
+                            } else {
+                                alert('Error deleting business data.');
+                            }
+                        });
+                }
+            }
+        </script>
+
+
 
         <div class="search-and-button">
             <button class="btn btn-primary" data-toggle="modal" data-target="#businessModal">Add New Business</button>
-            <input type="text" id="searchInput" class="form-control" placeholder="Search for businesses..." onkeyup="filterBusinesses()">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search for businessess..." onkeyup="filterBusinesses()">
         </div>
-
         <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Business Name</th>
                     <th>Contact Type</th>
+                    <!-- <th>Contact Date</th> -->
                     <th>Notes</th>
                     <th>Actions</th>
                 </tr>
@@ -53,6 +109,7 @@
     </div>
     <script src="navbar.js"></script>
 
+    <!-- this is a button for adding a new business -->
     <div class="modal fade" id="businessModal" tabindex="-1" role="dialog" aria-labelledby="businessModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -74,9 +131,14 @@
                             <input type="text" class="form-control" id="contactType" required>
                         </div>
                         <div class="form-group">
-                            <label for="notes">Notes</label>
+                            <label for="notes">notes</label>
                             <input type="text" class="form-control" id="notes" required>
                         </div>
+                        <!-- need to hide this form part, but auto add a date entered as today-->
+                        <!-- <div class="form-group">
+                            <label for="createdAt">Created At</label>
+                            <input type="text" class="form-control" id="createdAt" required>
+                        </div> -->
                         <button type="submit" class="btn btn-primary">Save</button>
                     </form>
                 </div>
@@ -94,6 +156,7 @@
                 const businessName = document.getElementById('businessName').value;
                 const contactType = document.getElementById('contactType').value;
                 const notes = document.getElementById('notes').value;
+                // const createdAt = document.getElementById('createdAt').value;
                 
                 const data = { businessName, contactType, notes };
 
@@ -108,7 +171,7 @@
                 .then(result => {
                     if (result.success) {
                         $('#businessModal').modal('hide');
-                        fetchBusinesses(); // Reload data
+                        fetchBusinesses();
                     } else {
                         alert('Error saving business');
                     }
@@ -183,57 +246,14 @@
                 }).then(response => response.json())
                 .then(result => {
                     if (result.success) {
-                        fetchBusinesses(); // Reload data
+                        fetchBusinesses();
                     } else {
                         alert('Error deleting business');
                     }
                 });
             }
         }
-
-        // Functions for dummy data
-        function addDummyBusinessData() {
-            fetch('/addDummyBusinessData', { method: 'POST' })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert('Dummy business data added successfully - please wait a few seconds to see refreshed page.');
-                        fetchBusinesses();
-                    } else {
-                        alert('Error adding dummy business data.');
-                    }
-                });
-        }
-
-        function addSmallDummyBusinessData() {
-            fetch('/addSmallDummyBusinessData', { method: 'POST' })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert('Small dummy business data added  - please wait a few seconds to see refreshed page.');
-                        fetchBusinesses();
-                    } else {
-                        alert('Error adding small dummy business data.');
-                    }
-                });
-        }
-
-        function deleteAllBusinessData() {
-            if (confirm('Are you sure you want to delete all business data?')) {
-                fetch('/Businesses', { method: 'DELETE' })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            alert('All business data deleted successfully.');
-                            fetchBusinesses();
-                        } else {
-                            alert('Error deleting business data.');
-                        }
-                    });
-            }
-        }
     </script>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

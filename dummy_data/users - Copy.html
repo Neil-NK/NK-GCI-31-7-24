@@ -6,6 +6,7 @@
     <title>Users</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Add a style tag to allow the button and search to sit next to each other -->
     <style>
         .search-and-button {
             display: flex;
@@ -18,23 +19,74 @@
         }
     </style>
 </head>
+
+
 <body>
     <div id="navbar-container"></div> <!-- Placeholder for navbar -->
+    <!-- Page content goes here -->
 
     <div class="container mt-4">
         <h1>Users</h1>
-        <div class="admin-section mb-4">
-            <h3>Admin Actions</h3>
-            <button class="btn btn-secondary" onclick="addDummyUserData()">Add Dummy User Data</button>
-            <button class="btn btn-secondary" onclick="addSmallDummyUserData()">Add Small Dummy User Data</button>
-            <button class="btn btn-secondary" onclick="deleteAllUserData()">Delete All User Data</button>
+        <div class="container mt-4">
+            <h1>Users</h1>
+            <div class="admin-section mb-4">
+                <h3>Admin Actions</h3>
+                <button class="btn btn-secondary" onclick="addDummyUserData()">Add Dummy User Data</button>
+                <button class="btn btn-secondary" onclick="addSmallDummyUserData()">Add Small Dummy User Data</button>
+                <button class="btn btn-secondary" onclick="deleteAllUserData()">Delete All User Data</button>
+            </div>
         </div>
+        
+        <script>
+            // Add Dummy User Data
+            function addDummyUserData() {
+                fetch('/addDummyUserData', { method: 'POST' })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert('Dummy user data added successfully.');
+                            fetchUsers();
+                        } else {
+                            alert('Error adding dummy user data.');
+                        }
+                    });
+            }
 
+            // Add Small Dummy User Data
+                function addSmallDummyUserData() {
+                    fetch('/addSmallDummyUserData', { method: 'POST' })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                alert('Small dummy user data added successfully.');
+                                fetchUsers();
+                            } else {
+                                alert('Error adding small dummy user data.');
+                            }
+                        });
+}
+        
+            // Delete All User Data
+            function deleteAllUserData() {
+                if (confirm('Are you sure you want to delete all user data?')) {
+                    fetch('/Users', { method: 'DELETE' })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                alert('All user data deleted successfully.');
+                                fetchUsers();
+                            } else {
+                                alert('Error deleting user data.');
+                            }
+                        });
+                }
+            }
+        </script>
+        
         <div class="search-and-button">
             <button class="btn btn-primary" data-toggle="modal" data-target="#userModal">Add New User</button>
             <input type="text" id="searchInput" class="form-control" placeholder="Search for users..." onkeyup="filterUsers()">
         </div>
-        
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -43,8 +95,6 @@
                     <th>Last Name</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>Business Name</th>
-                    <th>Department Name</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -54,7 +104,8 @@
         </table>
     </div>
     <script src="navbar.js"></script>
-
+    
+    <!-- this is a button for adding a new user -->
     <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -92,7 +143,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            fetchUsersWithBusiness();
+            fetchUsers();
 
             document.getElementById('userForm').addEventListener('submit', function (event) {
                 event.preventDefault();
@@ -115,7 +166,7 @@
                 .then(result => {
                     if (result.success) {
                         $('#userModal').modal('hide');
-                        fetchUsersWithBusiness(); // Reload data
+                        fetchUsers();
                     } else {
                         alert('Error saving user');
                     }
@@ -123,14 +174,13 @@
             });
         });
 
-        function fetchUsersWithBusiness() {
-            fetch('/UsersWithBusiness')
+        function fetchUsers() {
+            fetch('/users')
                 .then(response => response.json())
                 .then(data => {
                     const tableBody = document.getElementById('usersTableBody');
                     tableBody.innerHTML = '';
                     data.forEach(user => {
-                        const businessName = user.businessName || ''; // Fallback if undefined
                         const row = document.createElement('tr');
                         row.innerHTML = `
                             <td>${user.userID}</td>
@@ -138,17 +188,16 @@
                             <td>${user.lastName}</td>
                             <td>${user.email}</td>
                             <td>${user.phone}</td>
-                            <td>${businessName}</td> <!-- Display businessName -->
-                            <td>${user.departmentName || ''}</td>
                             <td>
+                                <!-- If level 2 login, then show edit button. -->
                                 <button class="btn btn-sm btn-warning" onclick="editUser(${user.userID})">Edit</button>
+                                <!-- If level 3 login, then show delete button. -->
                                 <button class="btn btn-sm btn-danger" onclick="deleteUser(${user.userID})">Delete</button>
                             </td>
                         `;
                         tableBody.appendChild(row);
                     });
-                })
-                .catch(error => console.error("Fetch error:", error));
+                });
         }
 
         function filterUsers() {
@@ -196,57 +245,14 @@
                 }).then(response => response.json())
                 .then(result => {
                     if (result.success) {
-                        fetchUsersWithBusiness(); // Reload data
+                        fetchUsers();
                     } else {
                         alert('Error deleting user');
                     }
                 });
             }
         }
-
-        // Functions for dummy data
-        function addDummyUserData() {
-            fetch('/addDummyUserData', { method: 'POST' })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert('Dummy user data added successfully - please wait a few seconds to see refreshed page.');
-                        fetchUsersWithBusiness();
-                    } else {
-                        alert('Error adding dummy user data.');
-                    }
-                });
-        }
-
-        function addSmallDummyUserData() {
-            fetch('/addSmallDummyUserData', { method: 'POST' })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert('Small dummy user data added successfully - please wait a few seconds to see refreshed page.');
-                        fetchUsersWithBusiness();
-                    } else {
-                        alert('Error adding small dummy user data.');
-                    }
-                });
-        }
-
-        function deleteAllUserData() {
-            if (confirm('Are you sure you want to delete all user data?')) {
-                fetch('/Users', { method: 'DELETE' })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            alert('All user data deleted successfully.');
-                            fetchUsersWithBusiness();
-                        } else {
-                            alert('Error deleting user data.');
-                        }
-                    });
-            }
-        }
     </script>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
