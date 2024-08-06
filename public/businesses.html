@@ -6,42 +6,8 @@
     <title>Businesses</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="businesses.css"> <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
-    <style>
-        .search-and-button {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        .search-and-button .form-control {
-            flex: 1;
-            margin-left: 15px; /* Space between the button and the input */
-        }
-
-        #voiceSearchBtn {
-            margin-left: 15px; /* Space between the input and the button */
-            background: #007bff; /* Primary background color */
-            color: white; /* Text color */
-            border: 1px solid #007bff; /* Border color matching the background */
-            border-radius: 4px; /* Rounded corners */
-            padding: 10px; /* Padding inside the button */
-            cursor: pointer; /* Pointer cursor on hover */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #voiceSearchBtn i {
-            font-size: 20px; /* Icon size */
-        }
-        #voiceSearchBtn:hover {
-            background: #0056b3; /* Darker shade on hover */
-            border-color: #0056b3; /* Match border with background on hover */
-        }
-        #voiceSearchBtn:focus {
-            outline: none; /* Remove default outline */
-            box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.5); /* Custom focus outline */
-        }
-    </style>
 </head>
 <body>
     <div id="navbar-container"></div> <!-- Placeholder for navbar -->
@@ -57,7 +23,7 @@
         </div>
 
         <div class="search-and-button">
-            <button class="btn btn-primary" data-toggle="modal" data-target="#businessModal">Add New Business</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#businessModal" onclick="resetBusinessForm()">Add New Business</button>
             <input type="text" id="searchInput" class="form-control" placeholder="Search for businesses..." onkeyup="filterBusinesses()">
             <button class="btn btn-secondary" id="voiceSearchBtn" title="Start Voice Search">
                 <i class="fas fa-microphone"></i> <!-- Font Awesome microphone icon -->
@@ -112,105 +78,65 @@
         </div>
     </div>
 
+    
     <script>
+        // When the document is fully loaded, initialize the page
         document.addEventListener('DOMContentLoaded', function () {
-            fetchBusinesses();
-
-            document.getElementById('businessForm').addEventListener('submit', function (event) {
-                event.preventDefault();
-                const businessID = document.getElementById('businessID').value;
-                const businessName = document.getElementById('businessName').value;
-                const contactType = document.getElementById('contactType').value;
-                const notes = document.getElementById('notes').value;
-                
-                const data = { businessName, contactType, notes };
-
-                const method = businessID ? 'PUT' : 'POST';
-                const url = businessID ? `/businesses/${businessID}` : '/businesses';
-
-                fetch(url, {
-                    method,
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                }).then(response => response.json())
-                .then(result => {
-                    if (result.success) {
-                        $('#businessModal').modal('hide');
-                        fetchBusinesses(); // Reload data
-                    } else {
-                        alert('Error saving business');
-                    }
-                });
+            fetchBusinesses(); // Fetch and display businesses when the page loads
+    
+            // Handle form submission for adding or editing businesses
+            document.getElementById('businessForm').addEventListener('submit', handleBusinessFormSubmit);
+    
+            // Setup voice search functionality
+            setupVoiceSearch();
+        });
+    
+        // Function to handle form submission for business data
+        function handleBusinessFormSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const businessID = document.getElementById('businessID').value; // Get the business ID, if available
+            const data = getBusinessFormData(); // Retrieve form data
+    
+            // Determine HTTP method and endpoint URL based on whether editing or adding a new business
+            const method = businessID ? 'PUT' : 'POST';
+            const url = businessID ? `/businesses/${businessID}` : '/businesses';
+    
+            sendBusinessData(url, method, data); // Send data to the server
+        }
+    
+        // Helper function to gather form data
+        function getBusinessFormData() {
+            return {
+                businessName: document.getElementById('businessName').value,
+                contactType: document.getElementById('contactType').value,
+                notes: document.getElementById('notes').value
+            };
+        }
+    
+        // Function to send business data to the server
+        function sendBusinessData(url, method, data) {
+            fetch(url, {
+                method,
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data) // Convert data to JSON string
+            }).then(response => response.json())
+            .then(result => {
+                if (result.success) {
+                    $('#businessModal').modal('hide'); // Hide the modal on success
+                    fetchBusinesses(); // Refresh the business list
+                } else {
+                    alert('Error saving business'); // Alert if there's an error
+                }
             });
-        });
-
-
-        // New Code: Voice Search Setup
-document.addEventListener('DOMContentLoaded', function () {
-    fetchBusinesses();
-
-    // Voice Search Setup
-    const voiceSearchBtn = document.getElementById('voiceSearchBtn');
-    const searchInput = document.getElementById('searchInput');
-
-    // Check for browser compatibility
-    if (!('webkitSpeechRecognition' in window)) {
-        voiceSearchBtn.style.display = 'none'; // Hide the button if speech recognition is not supported
-    } else {
-        const recognition = new webkitSpeechRecognition();
-        recognition.continuous = false; // Stops recognizing when user stops speaking
-        recognition.interimResults = false; // Only final results are returned
-
-        recognition.onresult = function(event) {
-            const transcript = event.results[0][0].transcript;
-            searchInput.value = transcript;
-            filterBusinesses(); // Trigger filter with voice input
-        };
-
-        recognition.onerror = function(event) {
-            console.error('Speech recognition error:', event.error);
-        };
-
-        voiceSearchBtn.addEventListener('click', function() {
-            recognition.start();
-        });
-    }
-
-    document.getElementById('businessForm').addEventListener('submit', function (event) {
-        event.preventDefault();
-        const businessID = document.getElementById('businessID').value;
-        const businessName = document.getElementById('businessName').value;
-        const contactType = document.getElementById('contactType').value;
-        const notes = document.getElementById('notes').value;
-
-        const data = { businessName, contactType, notes };
-
-        const method = businessID ? 'PUT' : 'POST';
-        const url = businessID ? `/businesses/${businessID}` : '/businesses';
-
-        fetch(url, {
-            method,
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        }).then(response => response.json())
-        .then(result => {
-            if (result.success) {
-                $('#businessModal').modal('hide');
-                fetchBusinesses(); // Reload data
-            } else {
-                alert('Error saving business');
-            }
-        });
-    });
-});
-
-
+        }
+    
+        // Function to fetch businesses and display them
         function fetchBusinesses() {
             fetch('/businesses')
                 .then(response => response.json())
                 .then(data => {
                     const tableBody = document.getElementById('businessesTableBody');
-                    tableBody.innerHTML = '';
+                    tableBody.innerHTML = ''; // Clear the table body
                     data.forEach(business => {
                         const row = document.createElement('tr');
                         row.innerHTML = `
@@ -219,48 +145,55 @@ document.addEventListener('DOMContentLoaded', function () {
                             <td>${business.contactType}</td>
                             <td>${business.notes}</td>
                             <td>
-    <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-            <td style="width: 50%; padding: 0; margin: 0;">
-                <button class="btn btn-sm btn-warning" style="width: 100%; border: none; margin: 0;" onclick="editBusiness(${business.businessID})">Edit</button>
-            </td>
-            <td style="width: 50%; padding: 0; margin: 0;">
-                <button class="btn btn-sm btn-danger" style="width: 100%; border: none; margin: 0;" onclick="deleteBusiness(${business.businessID})">Delete</button>
-            </td>
-        </tr>
-    </table>
-</td>
+                                ${getActionButtons(business.businessID)} <!-- Action buttons for editing and deleting -->
+                            </td>
                         `;
-                        tableBody.appendChild(row);
+                        tableBody.appendChild(row); // Append the row to the table body
                     });
                 });
         }
-
+    
+        // Helper function to generate action buttons HTML for each business row
+        function getActionButtons(businessID) {
+            return `
+                <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="width: 50%; padding: 0; margin: 0;">
+                            <button class="btn btn-sm btn-warning" style="width: 100%; border: none; margin: 0;" onclick="editBusiness(${businessID})">Edit</button>
+                        </td>
+                        <td style="width: 50%; padding: 0; margin: 0;">
+                            <button class="btn btn-sm btn-danger" style="width: 100%; border: none; margin: 0;" onclick="deleteBusiness(${businessID})">Delete</button>
+                        </td>
+                    </tr>
+                </table>
+            `;
+        }
+    
+        // Function to filter businesses based on search input
         function filterBusinesses() {
-    const input = document.getElementById("searchInput");
-    const filter = input.value.toUpperCase().trim();
-    const table = document.getElementById("businessesTableBody");
-    const tr = table.getElementsByTagName("tr");
-
-    for (let i = 0; i < tr.length; i++) {
-        const tdArray = tr[i].getElementsByTagName("td");
-        let rowContainsFilter = false;
-
-        // Create an array to hold all text content from the columns to search
-        let rowText = '';
-        for (let j = 0; j < tdArray.length; j++) {
-            rowText += (tdArray[j].textContent || tdArray[j].innerText) + ' ';
+            const input = document.getElementById("searchInput");
+            const filter = input.value.toUpperCase().trim(); // Get the search term
+            const table = document.getElementById("businessesTableBody");
+            const tr = table.getElementsByTagName("tr");
+    
+            for (let i = 0; i < tr.length; i++) {
+                const tdArray = tr[i].getElementsByTagName("td");
+                let rowContainsFilter = false;
+    
+                let rowText = '';
+                for (let j = 0; j < tdArray.length; j++) {
+                    rowText += (tdArray[j].textContent || tdArray[j].innerText) + ' ';
+                }
+    
+                if (rowText.toUpperCase().includes(filter)) {
+                    rowContainsFilter = true;
+                }
+    
+                tr[i].style.display = rowContainsFilter ? "" : "none"; // Show or hide the row based on the filter
+            }
         }
-
-        // Check if the filter term is included in the concatenated text
-        if (rowText.toUpperCase().includes(filter)) {
-            rowContainsFilter = true;
-        }
-
-        tr[i].style.display = rowContainsFilter ? "" : "none";
-    }
-}
-
+    
+        // Function to edit a business, fetching business data and filling the form
         function editBusiness(businessID) {
             fetch(`/businesses/${businessID}`)
                 .then(response => response.json())
@@ -269,10 +202,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.getElementById('businessName').value = business.businessName;
                     document.getElementById('contactType').value = business.contactType;
                     document.getElementById('notes').value = business.notes;
-                    $('#businessModal').modal('show');
+                    $('#businessModal').modal('show'); // Show the modal with pre-filled data
                 });
         }
-
+    
+        // Function to delete a business
         function deleteBusiness(businessID) {
             if (confirm('Are you sure you want to delete this business?')) {
                 fetch(`/businesses/${businessID}`, {
@@ -280,41 +214,30 @@ document.addEventListener('DOMContentLoaded', function () {
                 }).then(response => response.json())
                 .then(result => {
                     if (result.success) {
-                        fetchBusinesses(); // Reload data
+                        fetchBusinesses(); // Refresh the business list
                     } else {
                         alert('Error deleting business');
                     }
                 });
             }
         }
-
-        // Functions for dummy data
-        function addDummyBusinessData() {
-            fetch('/addDummyBusinessData', { method: 'POST' })
+    
+        // Generalized function for adding dummy data
+        function addDummyData(type) {
+            const endpoint = type === 'small' ? '/addSmallDummyBusinessData' : '/addDummyBusinessData';
+            fetch(endpoint, { method: 'POST' })
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
-                        alert('Dummy business data added successfully - please wait a few seconds to see refreshed page.');
-                        fetchBusinesses();
+                        alert(`Dummy ${type} business data added successfully - please wait a few seconds to see refreshed page.`);
+                        fetchBusinesses(); // Refresh the business list
                     } else {
-                        alert('Error adding dummy business data.');
+                        alert(`Error adding ${type} dummy business data.`);
                     }
                 });
         }
-
-        function addSmallDummyBusinessData() {
-            fetch('/addSmallDummyBusinessData', { method: 'POST' })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert('Small dummy business data added  - please wait a few seconds to see refreshed page.');
-                        fetchBusinesses();
-                    } else {
-                        alert('Error adding small dummy business data.');
-                    }
-                });
-        }
-
+    
+        // Function to delete all business data
         function deleteAllBusinessData() {
             if (confirm('Are you sure you want to delete all business data?')) {
                 fetch('/Businesses', { method: 'DELETE' })
@@ -322,14 +245,52 @@ document.addEventListener('DOMContentLoaded', function () {
                     .then(data => {
                         if (data.success) {
                             alert('All business data deleted successfully.');
-                            fetchBusinesses();
+                            fetchBusinesses(); // Refresh the business list
                         } else {
                             alert('Error deleting business data.');
                         }
                     });
             }
         }
-    </script>
+    
+        // Setup voice search functionality
+        function setupVoiceSearch() {
+            const voiceSearchBtn = document.getElementById('voiceSearchBtn');
+            const searchInput = document.getElementById('searchInput');
+    
+            // Check for browser compatibility
+            if (!('webkitSpeechRecognition' in window)) {
+                voiceSearchBtn.style.display = 'none'; // Hide the button if speech recognition is not supported
+            } else {
+                const recognition = new webkitSpeechRecognition();
+                recognition.continuous = false; // Stops recognizing when user stops speaking
+                recognition.interimResults = false; // Only final results are returned
+    
+                recognition.onresult = function(event) {
+                    const transcript = event.results[0][0].transcript;
+                    searchInput.value = transcript;
+                    filterBusinesses(); // Trigger filter with voice input
+                };
+    
+                recognition.onerror = function(event) {
+                    console.error('Speech recognition error:', event.error);
+                };
+    
+                voiceSearchBtn.addEventListener('click', function() {
+                    recognition.start();
+                });
+            }
+        }
+    
+    function resetBusinessForm() {
+        document.getElementById('businessID').value = '';
+        document.getElementById('businessName').value = '';
+        document.getElementById('contactType').value = '';
+        document.getElementById('notes').value = '';
+    }
+
+    document.querySelector('[data-target="#userModal"]').addEventListener('click', resetUserForm);
+</script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
