@@ -1,0 +1,10 @@
+/* users.css */
+.search-and-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.search-and-button .form-control {
+    flex: 1;
+    margin-left: 15px; /* Space between the button and the input */
+}
