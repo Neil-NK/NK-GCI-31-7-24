@@ -17,8 +17,8 @@
 
         <div class="admin-section mb-4">
             <h3>Admin Actions</h3>
-            <button class="btn btn-secondary" onclick="addDummyBusinessData()">Add Dummy Business Data</button>
-            <button class="btn btn-secondary" onclick="addSmallDummyBusinessData()">Add Small Dummy Business Data</button>
+            <button class="btn btn-secondary" onclick="addDummyData('large')">Add Dummy Business Data</button>
+            <button class="btn btn-secondary" onclick="addDummyData('small')">Add Small Dummy Business Data</button>
             <button class="btn btn-secondary" onclick="deleteAllBusinessData()">Delete All Business Data</button>
         </div>
 
@@ -289,7 +289,7 @@
         document.getElementById('notes').value = '';
     }
 
-    document.querySelector('[data-target="#userModal"]').addEventListener('click', resetUserForm);
+    document.querySelector('[data-target="#userModal"]').addEventListener('click', resetBusinessForm);
 </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
