@@ -29,6 +29,10 @@ let db = new sqlite3.Database('crm_database_UPDATED.db', (err) => {
   console.log('Connected to the SQLite database.');
 });
 
+/* ************************************************** 
+     ****************CREATE TABLES ******************
+     ************************************************ */ 
+
 // Create Tables
 db.serialize(() => {
   db.run(`CREATE TABLE IF NOT EXISTS "Users" (
@@ -64,6 +68,25 @@ db.serialize(() => {
     FOREIGN KEY("userID") REFERENCES "Users"("userID")
   )`);
 
+  db.run(`CREATE TABLE IF NOT EXISTS "Logs" (
+    "logID" INTEGER,
+    "businessID" INTEGER,
+    "userID" INTEGER,
+    "logDate" TEXT,
+    "logType" TEXT,
+    "notes" TEXT,
+    "createdAt" TEXT,
+    PRIMARY KEY("logID" AUTOINCREMENT),
+    FOREIGN KEY("businessID") REFERENCES "Businesses"("businessID"),
+    FOREIGN KEY("userID") REFERENCES "Users"("userID")
+  )`);
+
+
+
+  /* ************************************************** 
+     ******ADD INITIAL DATA IF TABLES EMPTY ***********
+     ************************************************** */ 
+
   // Add initial dummy data if tables are empty
   db.get('SELECT COUNT(*) AS count FROM Users', (err, row) => {
     if (err) {
@@ -82,7 +105,22 @@ db.serialize(() => {
       addDummyBusinessData();
     }
   });
+
+  
+  db.get('SELECT COUNT(*) AS count FROM Logs', (err, row) => {
+    if (err) {
+      return console.error(err.message);
+    }
+    if (row.count === 0) {
+      addDummyLogsData();
+    }
+  });
 });
+
+
+/* ************************************************** 
+     ****************ADD DUMMY DATA *******************
+     ************************************************** */ 
 
 // Function to add dummy user data from CSV
 const addDummyUserData = () => {
@@ -108,31 +146,6 @@ const addDummyUserData = () => {
 app.post('/addDummyUserData', (req, res) => {
   addDummyUserData();
   res.json({ success: true, message: 'Dummy user data is being added.' });
-});
-
-// Function to add dummy business data from CSV
-const addDummyBusinessData = () => {
-  const filePath = path.join(__dirname, 'dummy_data', 'dummy_business_data.csv');
-  fs.createReadStream(filePath)
-    .pipe(csv())
-    .on('data', (row) => {
-      const { businessName, contactType, contactDate, notes, createdAt } = row;
-      const stmt = db.prepare(`INSERT INTO Businesses (
-        businessName, contactType, contactDate, notes, createdAt
-      ) VALUES (?, ?, ?, ?, ?)`);
-
-      stmt.run([businessName, contactType, contactDate, notes, createdAt]);
-      stmt.finalize();
-    })
-    .on('end', () => {
-      console.log('Dummy business data added successfully.');
-    });
-};
-
-// Route to trigger the addition of dummy business data
-app.post('/addDummyBusinessData', (req, res) => {
-  addDummyBusinessData();
-  res.json({ success: true, message: 'Dummy business data is being added.' });
 });
 
 // Function to add small dummy user data from CSV
@@ -161,6 +174,33 @@ app.post('/addSmallDummyUserData', (req, res) => {
   res.json({ success: true, message: 'Small dummy user data is being added.' });
 });
 
+
+
+// Function to add dummy business data from CSV
+const addDummyBusinessData = () => {
+  const filePath = path.join(__dirname, 'dummy_data', 'dummy_business_data.csv');
+  fs.createReadStream(filePath)
+    .pipe(csv())
+    .on('data', (row) => {
+      const { businessName, contactType, contactDate, notes, createdAt } = row;
+      const stmt = db.prepare(`INSERT INTO Businesses (
+        businessName, contactType, contactDate, notes, createdAt
+      ) VALUES (?, ?, ?, ?, ?)`);
+
+      stmt.run([businessName, contactType, contactDate, notes, createdAt]);
+      stmt.finalize();
+    })
+    .on('end', () => {
+      console.log('Dummy business data added successfully.');
+    });
+};
+
+// Route to trigger the addition of dummy business data
+app.post('/addDummyBusinessData', (req, res) => {
+  addDummyBusinessData();
+  res.json({ success: true, message: 'Dummy business data is being added.' });
+});
+
 // Function to add small dummy business data from CSV
 const addSmallDummyBusinessData = () => {
   const filePath = path.join(__dirname, 'dummy_data', 'small_dummy_business_data.csv');
@@ -186,6 +226,69 @@ app.post('/addSmallDummyBusinessData', (req, res) => {
   res.json({ success: true, message: 'Small dummy business data is being added.' });
 });
 
+// Function to add dummy logs data from CSV
+const addDummyLogsData = () => {
+  const filePath = path.join(__dirname, 'dummy_data', 'dummy_logs_data.csv');
+  fs.createReadStream(filePath)
+    .pipe(csv())
+    .on('data', (row) => {
+      const { businessID, userID, logDate, logType, notes, createdAt } = row;
+      const stmt = db.prepare(`INSERT INTO Logs (
+        businessID, userID, logDate, logType, notes, createdAt
+      ) VALUES (?, ?, ?, ?, ?, ?)`);
+
+      stmt.run([businessID, userID, logDate, logType, notes, createdAt]);
+      stmt.finalize();
+    })
+    .on('end', () => {
+      console.log('Small dummy user data added successfully.');
+    });
+};
+
+
+// Route to trigger the addition of dummy logs data
+app.post('/addDummyLogsData', (req, res) => {
+  addDummyLogsData();
+  res.json({ success: true, message: 'Dummy logs data is being added.' });
+});
+
+
+
+// Function to add small dummy user data from CSV
+const addSmallDummyLogsData = () => {
+  const filePath = path.join(__dirname, 'dummy_data', 'small_dummy_logs_data.csv');
+  fs.createReadStream(filePath)
+    .pipe(csv())
+    .on('data', (row) => {
+      const { businessID, userID, logDate, logType, notes, createdAt } = row;
+      const stmt = db.prepare(`INSERT INTO Logs (
+        businessID, userID, logDate, logType, notes, createdAt
+      ) VALUES (?, ?, ?, ?, ?, ?)`);
+
+      stmt.run([businessID, userID, logDate, logType, notes, createdAt]);
+      stmt.finalize();
+    })
+    .on('end', () => {
+      console.log('Small dummy user data added successfully.');
+    });
+};
+
+
+// Route to trigger the addition of small dummy logs data
+app.post('/addSmallDummyLogsData', (req, res) => {
+  addSmallDummyLogsData();
+  res.json({ success: true, message: 'Small dummy logs data is being added.' });
+});
+
+
+
+
+
+
+/* ************************************************** 
+     **************** GETTING DATA *******************
+     ************************************************** */ 
+
 // Get all users with their associated business names
 app.get('/UsersWithBusiness', (req, res) => {
   const query = `
@@ -201,6 +304,26 @@ app.get('/UsersWithBusiness', (req, res) => {
     res.json(rows);
   });
 });
+
+// Get all logs with their associated business names and user names
+app.get('/LogsWithDetails', (req, res) => {
+  const query = `
+    SELECT Logs.logID, Logs.logDate, Logs.logType, Logs.notes, Logs.createdAt,
+           Businesses.businessName, 
+           Users.firstName, Users.lastName
+    FROM Logs
+    LEFT JOIN Businesses ON Logs.businessID = Businesses.businessID
+    LEFT JOIN Users ON Logs.userID = Users.userID
+  `;
+  db.all(query, [], (err, rows) => {
+    if (err) {
+      console.error("Database error:", err.message);
+      return res.status(500).json({ error: err.message });
+    }
+    res.json(rows);
+  });
+});
+
 
 // Get all users
 app.get('/Users', (req, res) => {
@@ -222,6 +345,32 @@ app.get('/Businesses', (req, res) => {
   });
 });
 
+// Get all logs
+app.get('/Logs', (req, res) => {
+  db.all('SELECT * FROM Logs', [], (err, rows) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.json(rows);
+  });
+});
+
+// Get all logs with their associated business names and user names
+app.get('/LogsWithBusinessNames', (req, res) => {
+  const query = `
+    SELECT Users.*, Businesses.businessName
+    FROM Users
+    LEFT JOIN Businesses ON Users.businessID = Businesses.businessID
+  `;
+  db.all(query, [], (err, rows) => {
+    if (err) {
+      console.error("Database error:", err.message);
+      return res.status(500).json({ error: err.message });
+    }
+    res.json(rows);
+  });
+});
+
 // Get a single User
 app.get('/Users/:id', (req, res) => {
   db.get('SELECT * FROM Users WHERE userID = ?', [req.params.id], (err, row) => {
@@ -235,6 +384,16 @@ app.get('/Users/:id', (req, res) => {
 // Get a single Business
 app.get('/Businesses/:id', (req, res) => {
   db.get('SELECT * FROM Businesses WHERE businessID = ?', [req.params.id], (err, row) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.json(row || {});
+  });
+});
+
+// Get a single Log
+app.get('/logs/:id', (req, res) => {
+  db.get('SELECT * FROM Logs WHERE logID = ?', [req.params.id], (err, row) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
@@ -291,6 +450,29 @@ app.post('/Businesses', (req, res) => {
   stmt.finalize();
 });
 
+// Create a new Log
+app.post('/logs', (req, res) => {
+  const {
+    businessID, userID, logDate, logType, notes
+  } = req.body;
+  const createdAt = new Date().toISOString();
+
+  const stmt = db.prepare(`INSERT INTO Logs (
+    businessID, userID, logDate, logType, notes, createdAt
+  ) VALUES (?, ?, ?, ?, ?, ?)`);
+
+  stmt.run([businessID, userID, logDate, logType, notes, createdAt], function (err) {
+    if (err) {
+      console.error('Error saving log:', err.message);
+      return res.status(500).json({ success: false, message: 'Error creating log' });
+    }
+    res.json({ success: true, logID: this.lastID });
+  });
+
+  stmt.finalize();
+});
+
+
 // Update an existing user
 app.put('/Users/:id', (req, res) => {
   const { firstName, lastName, email, phone, address, city, state, country, postcode, username, password, role } = req.body;
@@ -321,6 +503,26 @@ app.put('/Businesses/:id', (req, res) => {
   stmt.finalize();
 });
 
+// Update an existing log
+app.put('/logs/:id', (req, res) => {
+  const { businessID, userID, logDate, logType, notes, createdAt } = req.body;
+  
+  const stmt = db.prepare(`UPDATE Logs SET
+    businessID = ?, userID = ?, logDate = ?, logType = ?, notes = ?, createdAt = ?
+    WHERE logID = ?`);
+
+  stmt.run([businessID, userID, logDate, logType, notes, createdAt, req.params.id], function (err) {
+    if (err) {
+      console.error('Error updating log:', err.message);
+      return res.status(500).json({ success: false, message: 'Error updating log' });
+    }
+    res.json({ success: true, changes: this.changes });
+  });
+
+  stmt.finalize();
+});
+
+
 // Delete a user
 app.delete('/Users/:id', (req, res) => {
   const stmt = db.prepare('DELETE FROM Users WHERE userID = ?');
@@ -344,6 +546,20 @@ app.delete('/Businesses/:id', (req, res) => {
   });
   stmt.finalize();
 });
+
+// Delete a log
+app.delete('/Logs/:id', (req, res) => {
+  const stmt = db.prepare('DELETE FROM Logs WHERE logID = ?');
+  stmt.run([req.params.id], function (err) {
+    if (err) {
+      return res.status(500).json({ success: false, message: 'Error deleting log' });
+    }
+    res.json({ success: true, changes: this.changes });
+  });
+  stmt.finalize();
+});
+
+
 
 // Delete all users and reset userID counter
 app.delete('/Users', (req, res) => {
@@ -374,6 +590,25 @@ app.delete('/Businesses', (req, res) => {
           return res.status(500).json({ success: false, message: 'Error resetting businessID counter' });
         }
         res.json({ success: true, message: 'All businesses deleted and businessID counter reset.' });
+      });
+    });
+  });
+});
+
+
+
+// Delete all logs and reset logID counter
+app.delete('/logs', (req, res) => {
+  db.serialize(() => {
+    db.run('DELETE FROM Logs', function (err) {
+      if (err) {
+        return res.status(500).json({ success: false, message: 'Error deleting logs' });
+      }
+      db.run('DELETE FROM sqlite_sequence WHERE name="Logs"', function (err) {
+        if (err) {
+          return res.status(500).json({ success: false, message: 'Error resetting logID counter' });
+        }
+        res.json({ success: true, message: 'All logs deleted and logID counter reset.' });
       });
     });
   });

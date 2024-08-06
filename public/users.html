@@ -140,10 +140,20 @@
                             <td>${user.phone}</td>
                             <td>${businessName}</td> <!-- Display businessName -->
                             <td>${user.departmentName || ''}</td>
+                            
                             <td>
-                                <button class="btn btn-sm btn-warning" onclick="editUser(${user.userID})">Edit</button>
-                                <button class="btn btn-sm btn-danger" onclick="deleteUser(${user.userID})">Delete</button>
-                            </td>
+    <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="width: 50%; padding: 0; margin: 0;">
+                <button class="btn btn-sm btn-warning" style="width: 100%; border: none; margin: 0;" onclick="editUser(${user.userID})">Edit</button>
+            </td>
+            <td style="width: 50%; padding: 0; margin: 0;">
+                <button class="btn btn-sm btn-danger" style="width: 100%; border: none; margin: 0;" onclick="deleteUser(${user.userID})">Delete</button>
+            </td>
+        </tr>
+    </table>
+</td>
+                            
                         `;
                         tableBody.appendChild(row);
                     });
@@ -151,30 +161,30 @@
                 .catch(error => console.error("Fetch error:", error));
         }
 
-        function filterUsers() {
-            const input = document.getElementById('searchInput');
-            const filter = input.value.toUpperCase();
-            const table = document.getElementById('usersTableBody');
-            const tr = table.getElementsByTagName('tr');
+function filterUsers() {
+  const input = document.getElementById("searchInput");
+  const filter = input.value.toUpperCase().trim();
+  const table = document.getElementById("usersTableBody");
+  const tr = table.getElementsByTagName("tr");
 
-            for (let i = 0; i < tr.length; i++) {
-                const tdArray = tr[i].getElementsByTagName('td');
-                let rowContainsFilter = false;
+  for (let i = 0; i < tr.length; i++) {
+    const tdArray = tr[i].getElementsByTagName("td");
+    let rowContainsFilter = false;
 
-                for (let j = 0; j < tdArray.length - 1; j++) {
-                    const td = tdArray[j];
-                    if (td) {
-                        const txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            rowContainsFilter = true;
-                            break;
-                        }
-                    }
-                }
+    // Create an array to hold all text content from the columns to search
+    let rowText = '';
+    for (let j = 0; j < tdArray.length; j++) {
+      rowText += (tdArray[j].textContent || tdArray[j].innerText) + ' ';
+    }
 
-                tr[i].style.display = rowContainsFilter ? '' : 'none';
-            }
-        }
+    // Check if the filter term is included in the concatenated text
+    if (rowText.toUpperCase().includes(filter)) {
+      rowContainsFilter = true;
+    }
+
+    tr[i].style.display = rowContainsFilter ? "" : "none";
+  }
+}
 
         function editUser(userID) {
             fetch(`/users/${userID}`)

@@ -3,44 +3,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactions</title>
+    <title>Logs</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div id="navbar-container"></div>           <!-- Placeholder for navbar -->
-    <!-- Page content goes here -->
-</div>
-
-<script src="navbar.js"></script>               <!-- Include the navbar script -->
-
-        <a href="create-project.html" class="btn btn-primary mt-3">Create New Project</a> <!-- link does not exist)-->
+    <style>
+        .search-and-button {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .search-and-button .form-control {
+            flex: 1;
+            margin-left: 15px; /* Space between the button and the input */
+        }
         
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div> <!-- Placeholder for navbar -->
+
+    <div class="container mt-4">
+        <h1>Logs</h1>
+        <div class="admin-section mb-4">
+            <h3>Admin Actions</h3>
+            <button class="btn btn-secondary" onclick="addDummyLogsData()">Add Dummy Logs Data</button>
+            <button class="btn btn-secondary" onclick="addSmallDummyLogsData()">Add Small Dummy Logs Data</button>
+            <button class="btn btn-secondary" onclick="deleteAllLogsData()">Delete All Logs Data</button>
+        </div>
+
+        <div class="search-and-button">
+            <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#logModal">Add New Log</button> -->
+            <button class="btn btn-primary" data-toggle="modal" data-target="#logModal" onclick="setDefaultLogDate()">Add New Log</button>
+            <input type="text" id="searchInput" class="form-control" placeholder="Search for logs..." onkeyup="filterLogs()">
+        </div>
+
+        
+        
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Log ID</th>
+                    <th>Business Name</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Log Date</th>
+                    <th>Log Type</th>
+                    <th>Notes</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="logsTableBody">
+                <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="navbar.js"></script>
+
+    <div class="modal fade" id="logModal" tabindex="-1" role="dialog" aria-labelledby="logModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logModalLabel">Add New Log</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="logForm">
+                        <input type="hidden" id="logID">
+                        <div class="form-group">
+                            <label for="businessID">Business ID</label>
+                            <input type="number" class="form-control" id="businessID" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userID">User ID</label>
+                            <input type="number" class="form-control" id="userID" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="logDate">Log Date</label>
+                            <input type="date" class="form-control" id="logDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="logType">Log Type</label>
+                            <select class="form-control" id="logType" required>
+                                <option value="Phone">Phone</option>
+                                <option value="In Person">In Person</option>
+                                <option value="Event">Event</option>
+                                <option value="Email">Email</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Notes</label>
+                            <input type="text" class="form-control" id="notes" required>
+                        </div>
+                        <!-- <input type="datetime-local" class="form-control" id="createdAt" name="createdAt" hidden> -->
+                        <input type="datetime-local" class="form-control" id="createdAt" name="createdAt" readonly>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
+
     <script>
-        document.getElementById('supportTicketForm').addEventListener('submit', async function(event) {
-            event.preventDefault();
-            const form = event.target;
-            const formData = new FormData(form);
-            const data = {};
-            formData.forEach((value, key) => data[key] = value);
 
-            const response = await fetch('/support-tickets', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
+//         document.addEventListener('DOMContentLoaded', function () {
+//     // Fetch and display logs with details
+//     fetchLogsWithDetails();
+
+//     // Handle form submission for creating or updating a log
+//     document.getElementById('logForm').addEventListener('submit', function (event) {
+//         event.preventDefault();
+//         // Existing form handling logic...
+//     });
+// });
+
+function fetchLogsWithDetails() {
+    fetch('/LogsWithDetails')
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.getElementById('logsTableBody');
+            tableBody.innerHTML = '';
+            data.forEach(log => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${log.logID}</td>
+                    <td>${log.businessName}</td>
+                    <td>${log.firstName}</td>
+                    <td>${log.lastName}</td>
+                    <td>${log.logDate}</td>
+                    <td>${log.logType}</td>
+                    <td>${log.notes}</td>
+<td>
+    <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="width: 50%; padding: 0; margin: 0;">
+                <button class="btn btn-sm btn-warning" style="width: 100%; border: none; margin: 0;" onclick="editLog(${log.logID})">Edit</button>
+            </td>
+            <td style="width: 50%; padding: 0; margin: 0;">
+                <button class="btn btn-sm btn-danger" style="width: 100%; border: none; margin: 0;" onclick="deleteLog(${log.logID})">Delete</button>
+            </td>
+        </tr>
+    </table>
+</td>
+
+
+
+</td>
+
+                  
+                `;
+                tableBody.appendChild(row);
             });
+        }).catch(error => console.error("Fetch error:", error));
+}
 
-            const messageDiv = document.getElementById('message');
-            if (response.ok) {
-                messageDiv.innerHTML = '<div class="alert alert-success">Support ticket successfully created!</div>';
-                form.reset();
+
+       document.addEventListener('DOMContentLoaded', function () {
+    // Fetch and display logs
+    fetchLogsWithDetails();
+
+    // Handle form submission for creating or updating a log
+    document.getElementById('logForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        if (confirm('Are you sure you want to update this log?')) {
+        // Gather form data
+        const logID = document.getElementById('logID').value;
+        const businessID = document.getElementById('businessID').value;
+        const userID = document.getElementById('userID').value;
+        const logDate = document.getElementById('logDate').value;
+        const logType = document.getElementById('logType').value;
+        const notes = document.getElementById('notes').value;
+        const createdAt = document.getElementById('createdAt').value || new Date().toISOString();
+
+        // Construct data object
+        const data = { businessID, userID, logDate, logType, notes, createdAt };
+
+        // Determine the method and URL
+        const method = logID ? 'PUT' : 'POST';
+        const url = logID ? `/logs/${logID}` : '/logs';
+
+        // Make the fetch request to create or update the log
+        fetch(url, {
+            method,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }).then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                $('#logModal').modal('hide');
+                fetchLogsWithDetails(); // Reload data
             } else {
-                messageDiv.innerHTML = '<div class="alert alert-danger">Failed to create support ticket.</div>';
+                alert('Error saving log');
             }
+        }).catch(error => {
+            console.error('Error:', error);
         });
+    }
+    });
+});
+
+function setDefaultLogDate() {
+    const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+    document.getElementById('logDate').value = today;
+}
+
+
+
+// function fetchLogs() {
+//     fetch('/logs')
+//         .then(response => response.json())
+//         .then(data => {
+//             const tableBody = document.getElementById('logsTableBody');
+//             tableBody.innerHTML = '';
+//             data.forEach(log => {
+//                 const row = document.createElement('tr');
+//                 row.innerHTML = `
+//                     <td>${log.logID}</td>
+//                     <td>${log.businessID}</td>
+//                     <td>${log.userID}</td>
+//                     <td>${log.logDate}</td>
+//                     <td>${log.logType}</td>
+//                     <td>${log.notes}</td>
+//                     <td>${log.createdAt}</td>
+//                     <td>
+//                         <button class="btn btn-sm btn-warning" onclick="editLog(${log.logID})">Edit</button>
+//                         <button class="btn btn-sm btn-danger" onclick="deleteLog(${log.logID})">Delete</button>
+//                     </td>
+//                 `;
+//                 tableBody.appendChild(row);
+//             });
+//         }).catch(error => console.error("Fetch error:", error));
+// }
+
+        function filterLogs() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const table = document.getElementById('logsTableBody');
+            const tr = table.getElementsByTagName('tr');
+
+            for (let i = 0; i < tr.length; i++) {
+                const tdArray = tr[i].getElementsByTagName('td');
+                let rowContainsFilter = false;
+
+                for (let j = 0; j < tdArray.length - 1; j++) {
+                    const td = tdArray[j];
+                    if (td) {
+                        const txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            rowContainsFilter = true;
+                            break;
+                        }
+                    }
+                }
+
+                tr[i].style.display = rowContainsFilter ? '' : 'none';
+            }
+        }
+
+        function editLog(logID) {
+    fetch(`/logs/${logID}`)
+        .then(response => response.json())
+        .then(log => {
+            // Populate the form fields with the fetched data
+            document.getElementById('logID').value = log.logID;
+            document.getElementById('businessID').value = log.businessID;
+            document.getElementById('userID').value = log.userID;
+
+            // Format the date for the input field
+            let formattedDate = "";
+            if (log.logDate) {
+                formattedDate = new Date(log.logDate).toISOString().split('T')[0];
+            }
+            document.getElementById('logDate').value = formattedDate;
+
+            document.getElementById('logType').value = log.logType;
+            document.getElementById('notes').value = log.notes;
+            document.getElementById('createdAt').value = log.createdAt;
+
+            // Show the modal
+            $('#logModal').modal('show');
+        })
+        .catch(error => {
+            console.error('Error fetching log:', error);
+        });
+}
+
+
+
+        function deleteLog(logID) {
+            if (confirm('Are you sure you want to delete this log?')) {
+                fetch(`/logs/${logID}`, {
+                    method: 'DELETE'
+                }).then(response => response.json())
+                .then(result => {
+                    if (result.success) {
+                        fetchLogsWithDetails(); // Reload data
+                    } else {
+                        alert('Error deleting log');
+                    }
+                });
+            }
+        }
+
+        // Functions for dummy data
+        function addDummyLogsData() {
+            fetch('/addDummyLogsData', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Dummy logs data added successfully - please wait a few seconds to see refreshed page.');
+                        fetchLogsWithDetails();
+                    } else {
+                        alert('Error adding dummy logs data.');
+                    }
+                });
+        }
+
+        function addSmallDummyLogsData() {
+            fetch('/addSmallDummyLogsData', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Small dummy logs data added successfully - please wait a few seconds to see refreshed page.');
+                        fetchLogsWithDetails();
+                    } else {
+                        alert('Error adding small dummy logs data.');
+                    }
+                });
+        }
+
+
+        
+        function deleteAllLogsData() {
+  if (confirm('Are you sure you want to delete all logs data?')) {
+    fetch('/logs', { method: 'DELETE' })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          alert('All logs data deleted successfully.');
+          fetchLogsWithDetails(); // Reload data
+        } else {
+          alert('Error deleting logs data.');
+        }
+      });
+  }
+}
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

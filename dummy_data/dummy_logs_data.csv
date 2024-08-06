@@ -1,0 +1,1001 @@
+logID,businessID,userID,logDate,logType,notes,createdAt
+1,66,1531,2023-09-04T20:02:22,Event,Client invited to product launch event.,2024-06-20T20:02:22
+2,82,1449,2022-10-02T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-12T20:02:22
+3,151,1953,2024-06-27T20:02:22,Phone,Scheduled a demo for the new software.,2024-05-19T20:02:22
+4,46,620,2024-03-30T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-01T20:02:22
+5,110,236,2024-05-27T20:02:22,In Person,Discussed security measures and protocols.,2024-06-11T20:02:22
+6,187,1761,2022-05-08T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-17T20:02:22
+7,56,661,2023-10-11T20:02:22,Phone,Answered client questions about the new policy.,2024-05-23T20:02:22
+8,12,849,2023-08-02T20:02:22,Phone,Scheduled a demo for the new software.,2024-05-31T20:02:22
+9,19,1942,2022-12-04T20:02:22,Phone,Answered client questions about the new policy.,2024-07-06T20:02:22
+10,15,1284,2024-07-20T20:02:22,Event,Attended a tech conference with the client.,2024-05-16T20:02:22
+11,184,178,2021-11-25T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-30T20:02:22
+12,91,286,2022-07-24T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-24T20:02:22
+13,9,402,2024-05-24T20:02:22,Event,Attended a tech conference with the client.,2024-05-21T20:02:22
+14,192,1054,2022-07-19T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-03T20:02:22
+15,127,868,2022-07-05T20:02:22,Email,Sent client a report on project progress.,2024-05-26T20:02:22
+16,143,1403,2023-11-15T20:02:22,Event,Attended a tech conference with the client.,2024-08-01T20:02:22
+17,72,1654,2023-10-21T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-17T20:02:22
+18,170,1401,2022-11-20T20:02:22,Phone,Answered client questions about the new policy.,2024-06-26T20:02:22
+19,101,1997,2022-08-18T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-10T20:02:22
+20,56,1201,2022-03-11T20:02:22,Phone,Answered client questions about the new policy.,2024-05-08T20:02:22
+21,44,802,2022-05-25T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-19T20:02:22
+22,30,10,2022-10-03T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-08-02T20:02:22
+23,157,1699,2022-03-02T20:02:22,Email,Discussed project timeline via email.,2024-07-13T20:02:22
+24,168,307,2023-09-12T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-08-01T20:02:22
+25,93,44,2023-07-02T20:02:22,Event,Attended a tech conference with the client.,2024-07-25T20:02:22
+26,30,1306,2023-03-21T20:02:22,In Person,Presentation on new product features.,2024-06-08T20:02:22
+27,28,1847,2022-06-25T20:02:22,Email,Followed up on the status of the service request.,2024-05-19T20:02:22
+28,143,790,2024-01-10T20:02:22,Phone,Client called to find out account balance.,2024-07-15T20:02:22
+29,61,269,2022-05-15T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-04-30T20:02:22
+30,110,970,2023-01-14T20:02:22,In Person,Presentation on new product features.,2024-07-15T20:02:22
+31,138,1353,2023-11-01T20:02:22,Email,Discussed project timeline via email.,2024-06-04T20:02:22
+32,69,1906,2023-07-11T20:02:22,In Person,Presentation on new product features.,2024-06-04T20:02:22
+33,163,1932,2024-01-08T20:02:22,Email,Followed up on the status of the service request.,2024-05-06T20:02:22
+34,139,1673,2024-02-17T20:02:22,Event,Attended a tech conference with the client.,2024-05-17T20:02:22
+35,46,1427,2024-01-10T20:02:22,Email,Client requested additional resources via email.,2024-07-15T20:02:22
+36,190,845,2023-05-08T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-30T20:02:22
+37,194,1754,2024-04-25T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-22T20:02:22
+38,193,741,2022-04-01T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-25T20:02:22
+39,135,231,2021-12-01T20:02:22,Email,Sent client a report on project progress.,2024-05-06T20:02:22
+40,62,503,2023-08-10T20:02:22,In Person,Presentation on new product features.,2024-06-11T20:02:22
+41,181,153,2023-04-01T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-10T20:02:22
+42,182,919,2022-09-29T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-21T20:02:22
+43,70,1371,2024-04-10T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-17T20:02:22
+44,132,1383,2021-12-06T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-27T20:02:22
+45,100,1542,2024-05-10T20:02:22,Event,Attended a tech conference with the client.,2024-07-28T20:02:22
+46,189,567,2022-04-05T20:02:22,In Person,Presentation on new product features.,2024-05-05T20:02:22
+47,93,1262,2023-01-29T20:02:22,In Person,Discussed security measures and protocols.,2024-05-19T20:02:22
+48,190,1326,2022-10-18T20:02:22,Email,Discussed project timeline via email.,2024-06-19T20:02:22
+49,13,182,2021-11-22T20:02:22,Email,Followed up on the status of the service request.,2024-05-27T20:02:22
+50,100,1980,2024-03-05T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-10T20:02:22
+51,119,29,2024-04-25T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-11T20:02:22
+52,20,33,2024-06-08T20:02:22,Event,Client invited to product launch event.,2024-06-12T20:02:22
+53,59,1223,2023-12-22T20:02:22,Email,Discussed project timeline via email.,2024-05-12T20:02:22
+54,63,768,2024-06-23T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-25T20:02:22
+55,184,1617,2023-07-19T20:02:22,Event,Client invited to product launch event.,2024-05-30T20:02:22
+56,142,603,2023-04-18T20:02:22,Event,Attended a tech conference with the client.,2024-05-01T20:02:22
+57,112,465,2023-10-25T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-10T20:02:22
+58,47,1818,2022-05-20T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-08T20:02:22
+59,160,793,2023-04-21T20:02:22,Event,Client invited to product launch event.,2024-07-15T20:02:22
+60,107,1478,2022-05-24T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-03T20:02:22
+61,8,364,2021-12-16T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-08-04T20:02:22
+62,136,1152,2023-06-04T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-19T20:02:22
+63,86,601,2024-01-19T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-18T20:02:22
+64,38,1412,2023-01-20T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-31T20:02:22
+65,72,718,2023-02-05T20:02:22,Email,Followed up on the status of the service request.,2024-07-09T20:02:22
+66,154,1644,2022-03-17T20:02:22,In Person,Presentation on new product features.,2024-07-16T20:02:22
+67,70,1151,2022-09-15T20:02:22,Email,Sent client a report on project progress.,2024-07-21T20:02:22
+68,47,1078,2022-10-05T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-07T20:02:22
+69,48,1952,2022-03-25T20:02:22,Email,Discussed project timeline via email.,2024-07-11T20:02:22
+70,149,995,2023-06-29T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-25T20:02:22
+71,2,1098,2024-02-19T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-05-22T20:02:22
+72,127,868,2021-12-02T20:02:22,Email,Followed up on the status of the service request.,2024-05-03T20:02:22
+73,199,961,2022-03-31T20:02:22,Email,Discussed project timeline via email.,2024-05-09T20:02:22
+74,150,494,2023-11-17T20:02:22,Phone,Answered client questions about the new policy.,2024-07-09T20:02:22
+75,195,308,2024-01-21T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-26T20:02:22
+76,39,1702,2023-07-13T20:02:22,Event,Client attended a workshop on digital transformation.,2024-05-08T20:02:22
+77,53,147,2024-02-16T20:02:22,Email,Followed up on the status of the service request.,2024-05-24T20:02:22
+78,86,1715,2024-03-03T20:02:22,Email,Sent client a report on project progress.,2024-06-10T20:02:22
+79,168,1465,2023-07-21T20:02:22,Event,Client attended a workshop on digital transformation.,2024-05-28T20:02:22
+80,126,1741,2024-02-10T20:02:22,Email,Sent client a report on project progress.,2024-05-15T20:02:22
+81,128,675,2022-12-15T20:02:22,In Person,Presentation on new product features.,2024-06-20T20:02:22
+82,110,8,2023-02-16T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-02T20:02:22
+83,15,337,2023-01-05T20:02:22,Email,Sent client a report on project progress.,2024-06-28T20:02:22
+84,158,1395,2023-07-05T20:02:22,Phone,Answered client questions about the new policy.,2024-07-31T20:02:22
+85,52,1892,2024-07-27T20:02:22,Email,Client requested additional resources via email.,2024-05-01T20:02:22
+86,170,758,2024-05-21T20:02:22,Email,Discussed project timeline via email.,2024-07-16T20:02:22
+87,130,1957,2022-11-10T20:02:22,Event,Attended a tech conference with the client.,2024-07-24T20:02:22
+88,172,1882,2023-07-13T20:02:22,Event,Client attended a workshop on digital transformation.,2024-07-08T20:02:22
+89,44,1143,2022-12-10T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-22T20:02:22
+90,153,312,2024-03-21T20:02:22,Event,Client invited to product launch event.,2024-05-29T20:02:22
+91,6,1797,2022-04-17T20:02:22,Email,Discussed project timeline via email.,2024-05-29T20:02:22
+92,136,708,2024-06-01T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-16T20:02:22
+93,138,60,2024-03-23T20:02:22,In Person,Presentation on new product features.,2024-07-24T20:02:22
+94,172,1472,2023-01-13T20:02:22,In Person,Presentation on new product features.,2024-05-24T20:02:22
+95,105,1601,2023-11-15T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-21T20:02:22
+96,82,1598,2024-01-11T20:02:22,In Person,Presentation on new product features.,2024-06-29T20:02:22
+97,172,1629,2023-09-28T20:02:22,Phone,Answered client questions about the new policy.,2024-05-12T20:02:22
+98,131,1468,2023-06-21T20:02:22,Phone,Answered client questions about the new policy.,2024-06-04T20:02:22
+99,86,601,2023-12-13T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-18T20:02:22
+100,151,1953,2022-11-05T20:02:22,In Person,Discussed security measures and protocols.,2024-06-13T20:02:22
+101,153,583,2023-07-06T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-26T20:02:22
+102,124,474,2023-12-18T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-05T20:02:22
+103,190,1562,2022-05-12T20:02:22,Phone,Client called to find out account balance.,2024-06-09T20:02:22
+104,38,1102,2022-08-24T20:02:22,Phone,Answered client questions about the new policy.,2024-07-31T20:02:22
+105,6,967,2023-03-25T20:02:22,Event,Client invited to product launch event.,2024-06-03T20:02:22
+106,80,1736,2022-10-19T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-31T20:02:22
+107,171,224,2023-05-20T20:02:22,Email,Sent client a report on project progress.,2024-07-28T20:02:22
+108,35,1400,2024-02-01T20:02:22,In Person,Presentation on new product features.,2024-07-07T20:02:22
+109,71,1331,2022-06-10T20:02:22,Email,Followed up on the status of the service request.,2024-05-11T20:02:22
+110,42,1382,2022-10-03T20:02:22,In Person,Discussed security measures and protocols.,2024-08-02T20:02:22
+111,139,946,2021-11-25T20:02:22,Phone,Client called to find out account balance.,2024-07-11T20:02:22
+112,33,1868,2024-03-31T20:02:22,In Person,Discussed security measures and protocols.,2024-05-21T20:02:22
+113,73,1470,2022-01-08T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-03T20:02:22
+114,6,967,2022-09-10T20:02:22,Phone,Answered client questions about the new policy.,2024-04-29T20:02:22
+115,175,1587,2024-01-28T20:02:22,Email,Discussed project timeline via email.,2024-07-15T20:02:22
+116,5,434,2024-02-12T20:02:22,Event,Client invited to product launch event.,2024-06-12T20:02:22
+117,53,1563,2024-06-02T20:02:22,Email,Followed up on the status of the service request.,2024-06-25T20:02:22
+118,109,1656,2023-05-11T20:02:22,Email,Followed up on the status of the service request.,2024-07-03T20:02:22
+119,182,305,2022-09-30T20:02:22,Email,Client requested additional resources via email.,2024-06-18T20:02:22
+120,185,760,2022-10-24T20:02:22,Email,Followed up on the status of the service request.,2024-04-29T20:02:22
+121,37,1327,2024-07-20T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-27T20:02:22
+122,173,1171,2023-12-25T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-21T20:02:22
+123,95,1011,2021-12-23T20:02:22,Phone,Answered client questions about the new policy.,2024-06-29T20:02:22
+124,113,618,2023-12-18T20:02:22,Email,Sent client a report on project progress.,2024-05-05T20:02:22
+125,182,764,2023-05-09T20:02:22,Phone,Answered client questions about the new policy.,2024-06-30T20:02:22
+126,39,545,2023-04-05T20:02:22,Email,Client requested additional resources via email.,2024-04-30T20:02:22
+127,18,1045,2024-03-07T20:02:22,In Person,Discussed security measures and protocols.,2024-05-04T20:02:22
+128,23,763,2024-04-02T20:02:22,In Person,Discussed security measures and protocols.,2024-07-10T20:02:22
+129,42,1696,2023-12-16T20:02:22,Event,Client attended a workshop on digital transformation.,2024-07-06T20:02:22
+130,14,1445,2022-02-04T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-14T20:02:22
+131,46,1895,2022-10-22T20:02:22,Phone,Client called to find out account balance.,2024-07-21T20:02:22
+132,54,755,2021-11-22T20:02:22,In Person,Presentation on new product features.,2024-05-26T20:02:22
+133,16,1396,2023-03-28T20:02:22,Email,Client requested additional resources via email.,2024-05-10T20:02:22
+134,129,1346,2022-05-30T20:02:22,Phone,Client called to find out account balance.,2024-05-14T20:02:22
+135,118,1506,2023-06-02T20:02:22,In Person,Presentation on new product features.,2024-06-28T20:02:22
+136,17,721,2024-05-10T20:02:22,Phone,Answered client questions about the new policy.,2024-06-28T20:02:22
+137,194,1150,2024-07-31T20:02:22,Email,Sent client a report on project progress.,2024-05-07T20:02:22
+138,13,126,2023-01-12T20:02:22,Event,Attended a tech conference with the client.,2024-07-01T20:02:22
+139,21,1372,2024-04-26T20:02:22,Phone,Answered client questions about the new policy.,2024-07-03T20:02:22
+140,93,1120,2022-11-28T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-02T20:02:22
+141,119,1008,2023-07-19T20:02:22,Phone,Client called to find out account balance.,2024-05-12T20:02:22
+142,35,810,2023-03-25T20:02:22,Event,Client invited to product launch event.,2024-07-18T20:02:22
+143,69,1628,2022-10-25T20:02:22,In Person,Discussed security measures and protocols.,2024-06-30T20:02:22
+144,125,1435,2023-12-29T20:02:22,In Person,Discussed security measures and protocols.,2024-07-09T20:02:22
+145,62,1909,2021-11-25T20:02:22,Email,Sent client a report on project progress.,2024-06-27T20:02:22
+146,164,1131,2023-10-27T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-04-30T20:02:22
+147,137,1027,2023-04-18T20:02:22,In Person,Presentation on new product features.,2024-07-28T20:02:22
+148,157,1699,2024-03-23T20:02:22,In Person,Presentation on new product features.,2024-06-26T20:02:22
+149,48,485,2022-01-15T20:02:22,Phone,Answered client questions about the new policy.,2024-05-11T20:02:22
+150,122,1309,2022-11-19T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-31T20:02:22
+151,162,123,2022-07-15T20:02:22,Email,Sent client a report on project progress.,2024-07-18T20:02:22
+152,16,40,2022-04-15T20:02:22,Phone,Scheduled a demo for the new software.,2024-05-31T20:02:22
+153,38,1685,2023-02-21T20:02:22,Event,Attended a tech conference with the client.,2024-06-26T20:02:22
+154,172,1472,2022-08-12T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-05-14T20:02:22
+155,70,285,2022-08-01T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-31T20:02:22
+156,80,1855,2024-07-01T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-05-05T20:02:22
+157,113,589,2024-01-23T20:02:22,Email,Sent client a report on project progress.,2024-06-04T20:02:22
+158,194,989,2023-06-07T20:02:22,Phone,Answered client questions about the new policy.,2024-06-06T20:02:22
+159,111,715,2022-06-25T20:02:22,Email,Client requested additional resources via email.,2024-06-29T20:02:22
+160,169,1676,2024-08-03T20:02:22,Event,Client invited to product launch event.,2024-07-28T20:02:22
+161,2,1091,2022-01-12T20:02:22,Phone,Answered client questions about the new policy.,2024-07-27T20:02:22
+162,188,1954,2022-01-16T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-01T20:02:22
+163,103,1622,2022-10-11T20:02:22,Email,Followed up on the status of the service request.,2024-06-27T20:02:22
+164,21,1603,2023-05-31T20:02:22,Email,Client requested additional resources via email.,2024-07-01T20:02:22
+165,10,1532,2023-12-22T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-08T20:02:22
+166,69,800,2023-10-16T20:02:22,Email,Followed up on the status of the service request.,2024-07-27T20:02:22
+167,192,1054,2024-05-08T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-06T20:02:22
+168,155,394,2022-04-03T20:02:22,Event,Client attended a workshop on digital transformation.,2024-05-14T20:02:22
+169,60,1172,2022-04-22T20:02:22,Event,Client invited to product launch event.,2024-06-20T20:02:22
+170,58,1592,2023-04-07T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-11T20:02:22
+171,196,1783,2024-01-15T20:02:22,Email,Client requested additional resources via email.,2024-07-14T20:02:22
+172,92,274,2022-06-27T20:02:22,Event,Attended a tech conference with the client.,2024-04-29T20:02:22
+173,75,1041,2023-06-20T20:02:22,Email,Sent client a report on project progress.,2024-07-18T20:02:22
+174,148,131,2024-07-02T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-05-13T20:02:22
+175,2,1574,2024-03-24T20:02:22,Email,Sent client a report on project progress.,2024-06-15T20:02:22
+176,110,1260,2022-10-22T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-22T20:02:22
+177,179,62,2022-04-25T20:02:22,Email,Sent client a report on project progress.,2024-06-15T20:02:22
+178,110,970,2023-03-18T20:02:22,Email,Client requested additional resources via email.,2024-05-03T20:02:22
+179,193,741,2023-04-03T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-06-04T20:02:22
+180,36,349,2023-12-26T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-17T20:02:22
+181,76,1650,2022-03-17T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-05-21T20:02:22
+182,140,192,2023-12-12T20:02:22,Email,Followed up on the status of the service request.,2024-07-23T20:02:22
+183,136,667,2023-08-21T20:02:22,Event,Client invited to product launch event.,2024-07-22T20:02:22
+184,26,1230,2022-08-10T20:02:22,Email,Client requested additional resources via email.,2024-05-25T20:02:22
+185,84,188,2022-02-19T20:02:22,Event,Client invited to product launch event.,2024-05-12T20:02:22
+186,23,377,2023-01-13T20:02:22,Email,Client requested additional resources via email.,2024-07-02T20:02:22
+187,48,720,2023-12-13T20:02:22,Email,Sent client a report on project progress.,2024-06-04T20:02:22
+188,126,254,2023-04-24T20:02:22,Event,Attended a tech conference with the client.,2024-06-24T20:02:22
+189,2,125,2022-09-30T20:02:22,Event,Client attended a workshop on digital transformation.,2024-07-21T20:02:22
+190,56,1473,2023-07-26T20:02:22,Event,Client attended a workshop on digital transformation.,2024-05-16T20:02:22
+191,148,746,2024-02-15T20:02:22,In Person,Presentation on new product features.,2024-06-30T20:02:22
+192,41,1784,2022-03-22T20:02:22,In Person,Discussed security measures and protocols.,2024-04-28T20:02:22
+193,171,1658,2022-07-17T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-08-03T20:02:22
+194,78,299,2023-05-23T20:02:22,Phone,Client called to find out account balance.,2024-08-04T20:02:22
+195,25,408,2024-07-05T20:02:22,Phone,Answered client questions about the new policy.,2024-06-06T20:02:22
+196,176,1821,2022-05-26T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-04T20:02:22
+197,79,280,2023-02-14T20:02:22,Email,Client requested additional resources via email.,2024-06-10T20:02:22
+198,75,945,2024-07-10T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-05T20:02:22
+199,153,881,2023-12-30T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-01T20:02:22
+200,145,1067,2023-08-27T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-08T20:02:22
+201,117,1898,2023-11-05T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-07T20:02:22
+202,157,1982,2022-10-08T20:02:22,Event,Attended a tech conference with the client.,2024-07-28T20:02:22
+203,158,1265,2022-05-03T20:02:22,Email,Followed up on the status of the service request.,2024-06-08T20:02:22
+204,110,1036,2024-01-12T20:02:22,Phone,Answered client questions about the new policy.,2024-05-08T20:02:22
+205,22,1225,2022-03-19T20:02:22,Email,Client requested additional resources via email.,2024-06-08T20:02:22
+206,105,1024,2023-01-26T20:02:22,Email,Sent client a report on project progress.,2024-06-03T20:02:22
+207,138,1147,2022-03-15T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-17T20:02:22
+208,195,805,2021-12-22T20:02:22,Email,Client requested additional resources via email.,2024-07-30T20:02:22
+209,82,1449,2022-10-20T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-05-13T20:02:22
+210,175,969,2023-04-23T20:02:22,Phone,Client called to find out account balance.,2024-08-02T20:02:22
+211,93,1690,2022-11-20T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-20T20:02:22
+212,110,578,2024-06-22T20:02:22,Email,Discussed project timeline via email.,2024-07-29T20:02:22
+213,63,1583,2023-11-12T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-02T20:02:22
+214,80,1894,2023-09-09T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-02T20:02:22
+215,121,1928,2023-02-26T20:02:22,In Person,Presentation on new product features.,2024-06-28T20:02:22
+216,152,1623,2024-01-16T20:02:22,Event,Attended a tech conference with the client.,2024-07-08T20:02:22
+217,144,435,2023-03-06T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-10T20:02:22
+218,70,1981,2023-01-27T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-04-28T20:02:22
+219,77,388,2023-10-31T20:02:22,Event,Client invited to product launch event.,2024-08-03T20:02:22
+220,66,1440,2024-01-23T20:02:22,Phone,Answered client questions about the new policy.,2024-06-03T20:02:22
+221,9,1907,2022-04-29T20:02:22,Email,Followed up on the status of the service request.,2024-08-04T20:02:22
+222,100,1792,2022-07-23T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-23T20:02:22
+223,75,18,2022-01-17T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-05-18T20:02:22
+224,162,438,2022-11-12T20:02:22,Email,Client requested additional resources via email.,2024-06-27T20:02:22
+225,174,54,2024-04-12T20:02:22,In Person,Discussed security measures and protocols.,2024-05-13T20:02:22
+226,9,1860,2021-12-01T20:02:22,Event,Client invited to product launch event.,2024-06-21T20:02:22
+227,63,1175,2022-08-07T20:02:22,Phone,Client called to find out account balance.,2024-05-05T20:02:22
+228,124,565,2023-09-14T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-08T20:02:22
+229,166,1443,2022-10-24T20:02:22,Event,Client invited to product launch event.,2024-07-15T20:02:22
+230,104,361,2023-05-29T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-14T20:02:22
+231,172,419,2024-01-26T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-10T20:02:22
+232,58,880,2023-04-29T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-07T20:02:22
+233,180,1867,2024-02-19T20:02:22,In Person,Presentation on new product features.,2024-06-16T20:02:22
+234,179,371,2023-12-01T20:02:22,Email,Followed up on the status of the service request.,2024-07-21T20:02:22
+235,84,1841,2022-10-01T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-27T20:02:22
+236,16,776,2022-08-19T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-25T20:02:22
+237,55,1970,2023-01-08T20:02:22,Phone,Client called to find out account balance.,2024-07-31T20:02:22
+238,83,1646,2024-06-27T20:02:22,Email,Followed up on the status of the service request.,2024-07-19T20:02:22
+239,5,137,2022-12-17T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-25T20:02:22
+240,130,1940,2022-02-13T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-22T20:02:22
+241,155,1986,2024-03-13T20:02:22,In Person,Discussed security measures and protocols.,2024-08-04T20:02:22
+242,18,1045,2024-04-15T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-18T20:02:22
+243,124,1130,2023-02-04T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-24T20:02:22
+244,43,491,2023-08-05T20:02:22,Event,Attended a tech conference with the client.,2024-05-28T20:02:22
+245,148,1294,2024-02-07T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-07T20:02:22
+246,50,537,2023-06-09T20:02:22,Event,Attended a tech conference with the client.,2024-05-12T20:02:22
+247,79,401,2022-03-30T20:02:22,Phone,Answered client questions about the new policy.,2024-05-11T20:02:22
+248,181,638,2024-05-16T20:02:22,Phone,Answered client questions about the new policy.,2024-07-30T20:02:22
+249,2,1727,2022-07-29T20:02:22,In Person,Discussed security measures and protocols.,2024-06-21T20:02:22
+250,174,1671,2023-12-22T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-05-30T20:02:22
+251,151,295,2022-08-23T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-26T20:02:22
+252,117,1848,2022-05-24T20:02:22,Phone,Answered client questions about the new policy.,2024-07-24T20:02:22
+253,97,77,2024-06-25T20:02:22,Phone,Client called to find out account balance.,2024-05-29T20:02:22
+254,100,1542,2024-03-28T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-28T20:02:22
+255,160,501,2022-03-03T20:02:22,In Person,Presentation on new product features.,2024-05-27T20:02:22
+256,68,1930,2024-01-20T20:02:22,Email,Followed up on the status of the service request.,2024-04-27T20:02:22
+257,105,1601,2023-07-25T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-08T20:02:22
+258,186,581,2022-09-08T20:02:22,Event,Client attended a workshop on digital transformation.,2024-07-15T20:02:22
+259,134,1989,2023-08-02T20:02:22,In Person,Presentation on new product features.,2024-05-12T20:02:22
+260,46,1649,2022-02-08T20:02:22,Event,Client attended a workshop on digital transformation.,2024-07-16T20:02:22
+261,9,1177,2024-07-02T20:02:22,Email,Sent client a report on project progress.,2024-05-07T20:02:22
+262,15,1710,2022-02-02T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-20T20:02:22
+263,5,1163,2022-05-04T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-10T20:02:22
+264,100,1792,2022-03-28T20:02:22,Event,Client invited to product launch event.,2024-04-30T20:02:22
+265,144,1782,2023-08-28T20:02:22,Event,Attended a tech conference with the client.,2024-07-13T20:02:22
+266,53,248,2021-11-19T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-18T20:02:22
+267,90,871,2023-06-10T20:02:22,Email,Sent client a report on project progress.,2024-07-10T20:02:22
+268,142,1999,2022-04-16T20:02:22,Email,Client requested additional resources via email.,2024-07-07T20:02:22
+269,142,115,2024-06-24T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-06-17T20:02:22
+270,177,593,2022-11-25T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-01T20:02:22
+271,83,1299,2023-08-20T20:02:22,Event,Attended a tech conference with the client.,2024-08-02T20:02:22
+272,129,906,2022-09-26T20:02:22,Email,Client requested additional resources via email.,2024-07-29T20:02:22
+273,87,1176,2024-01-10T20:02:22,Event,Client attended a workshop on digital transformation.,2024-05-26T20:02:22
+274,132,1705,2023-01-01T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-05-05T20:02:22
+275,41,681,2024-03-02T20:02:22,Email,Client requested additional resources via email.,2024-08-03T20:02:22
+276,86,1715,2022-05-13T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-16T20:02:22
+277,1,409,2023-05-20T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-24T20:02:22
+278,184,178,2024-08-03T20:02:22,Email,Discussed project timeline via email.,2024-05-23T20:02:22
+279,96,1356,2023-01-04T20:02:22,Event,Client invited to product launch event.,2024-06-30T20:02:22
+280,55,1255,2022-02-01T20:02:22,Event,Attended a tech conference with the client.,2024-05-22T20:02:22
+281,31,3,2023-03-27T20:02:22,Phone,Client called to find out account balance.,2024-07-11T20:02:22
+282,71,1331,2023-01-01T20:02:22,Phone,Answered client questions about the new policy.,2024-06-20T20:02:22
+283,161,528,2022-06-16T20:02:22,Email,Followed up on the status of the service request.,2024-06-02T20:02:22
+284,26,1417,2022-12-12T20:02:22,Event,Attended a tech conference with the client.,2024-06-05T20:02:22
+285,144,435,2023-02-21T20:02:22,Email,Followed up on the status of the service request.,2024-06-16T20:02:22
+286,128,1410,2023-02-22T20:02:22,Email,Sent client a report on project progress.,2024-05-21T20:02:22
+287,132,617,2022-06-10T20:02:22,Phone,Answered client questions about the new policy.,2024-05-11T20:02:22
+288,172,1538,2022-11-21T20:02:22,Email,Client requested additional resources via email.,2024-06-15T20:02:22
+289,153,219,2022-06-29T20:02:22,In Person,Discussed security measures and protocols.,2024-05-25T20:02:22
+290,14,1445,2023-03-31T20:02:22,In Person,Discussed security measures and protocols.,2024-05-28T20:02:22
+291,182,28,2022-04-24T20:02:22,Event,Client attended a workshop on digital transformation.,2024-05-03T20:02:22
+292,183,145,2022-09-26T20:02:22,Phone,Client called to find out account balance.,2024-06-13T20:02:22
+293,23,729,2022-10-29T20:02:22,Phone,Client called to find out account balance.,2024-07-15T20:02:22
+294,76,1203,2022-04-10T20:02:22,Phone,Answered client questions about the new policy.,2024-06-07T20:02:22
+295,167,1518,2023-09-17T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-24T20:02:22
+296,156,654,2022-11-13T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-30T20:02:22
+297,156,930,2023-05-03T20:02:22,Event,Client invited to product launch event.,2024-06-11T20:02:22
+298,98,212,2023-01-13T20:02:22,Email,Discussed project timeline via email.,2024-05-12T20:02:22
+299,85,1642,2022-03-12T20:02:22,Phone,Scheduled a demo for the new software.,2024-05-16T20:02:22
+300,127,1885,2023-12-02T20:02:22,In Person,Presentation on new product features.,2024-05-05T20:02:22
+301,191,759,2023-08-27T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-31T20:02:22
+302,2,1904,2023-01-30T20:02:22,Email,Sent client a report on project progress.,2024-06-03T20:02:22
+303,133,1268,2024-01-13T20:02:22,Event,Attended a tech conference with the client.,2024-06-27T20:02:22
+304,31,838,2023-03-12T20:02:22,Email,Discussed project timeline via email.,2024-05-30T20:02:22
+305,87,747,2023-09-26T20:02:22,Event,Attended a tech conference with the client.,2024-07-20T20:02:22
+306,141,490,2024-04-14T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-20T20:02:22
+307,21,645,2022-05-15T20:02:22,Phone,Client called to find out account balance.,2024-07-29T20:02:22
+308,98,439,2022-02-11T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-05T20:02:22
+309,29,1505,2023-06-14T20:02:22,Event,Client invited to product launch event.,2024-06-25T20:02:22
+310,172,419,2022-07-18T20:02:22,Email,Discussed project timeline via email.,2024-04-27T20:02:22
+311,199,851,2023-12-19T20:02:22,Event,Attended a tech conference with the client.,2024-07-03T20:02:22
+312,12,416,2022-08-03T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-06T20:02:22
+313,82,1598,2023-09-25T20:02:22,In Person,Presentation on new product features.,2024-05-08T20:02:22
+314,153,219,2021-12-20T20:02:22,Phone,Scheduled a demo for the new software.,2024-08-02T20:02:22
+315,183,145,2022-07-01T20:02:22,Email,Sent client a report on project progress.,2024-06-29T20:02:22
+316,160,1683,2022-02-06T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-30T20:02:22
+317,132,1170,2022-08-14T20:02:22,Email,Client requested additional resources via email.,2024-06-10T20:02:22
+318,115,1310,2023-02-08T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-13T20:02:22
+319,55,1255,2022-12-19T20:02:22,Email,Followed up on the status of the service request.,2024-06-26T20:02:22
+320,61,290,2022-05-08T20:02:22,Email,Sent client a report on project progress.,2024-06-03T20:02:22
+321,133,1268,2023-11-12T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-22T20:02:22
+322,81,650,2022-12-07T20:02:22,Event,Client attended a workshop on digital transformation.,2024-05-06T20:02:22
+323,199,1547,2022-09-14T20:02:22,Event,Attended a tech conference with the client.,2024-07-04T20:02:22
+324,100,477,2022-05-16T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-04T20:02:22
+325,46,1895,2023-07-02T20:02:22,Email,Client requested additional resources via email.,2024-05-01T20:02:22
+326,5,1634,2022-10-29T20:02:22,Email,Followed up on the status of the service request.,2024-05-07T20:02:22
+327,96,1356,2022-12-02T20:02:22,Event,Client invited to product launch event.,2024-05-16T20:02:22
+328,159,1878,2024-02-01T20:02:22,In Person,Discussed security measures and protocols.,2024-07-11T20:02:22
+329,128,1410,2022-09-04T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-26T20:02:22
+330,185,1206,2024-02-16T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-26T20:02:22
+331,180,912,2023-10-10T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-05-26T20:02:22
+332,33,971,2023-04-19T20:02:22,In Person,Presentation on new product features.,2024-05-25T20:02:22
+333,120,840,2022-08-08T20:02:22,Event,Client invited to product launch event.,2024-06-05T20:02:22
+334,85,1195,2022-04-21T20:02:22,Email,Discussed project timeline via email.,2024-06-12T20:02:22
+335,64,1004,2022-08-16T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-16T20:02:22
+336,82,1287,2021-11-10T20:02:22,Email,Sent client a report on project progress.,2024-05-03T20:02:22
+337,182,28,2022-08-16T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-07T20:02:22
+338,135,386,2022-02-24T20:02:22,Email,Sent client a report on project progress.,2024-05-10T20:02:22
+339,127,1491,2022-11-03T20:02:22,Phone,Client called to find out account balance.,2024-06-16T20:02:22
+340,181,191,2022-09-17T20:02:22,Event,Attended a tech conference with the client.,2024-05-02T20:02:22
+341,126,38,2023-03-06T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-25T20:02:22
+342,18,1062,2023-06-07T20:02:22,Email,Discussed project timeline via email.,2024-05-08T20:02:22
+343,2,1429,2022-09-07T20:02:22,Email,Discussed project timeline via email.,2024-07-02T20:02:22
+344,145,1155,2022-08-02T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-20T20:02:22
+345,49,1588,2023-06-04T20:02:22,In Person,Presentation on new product features.,2024-06-18T20:02:22
+346,191,869,2023-06-15T20:02:22,Event,Attended a tech conference with the client.,2024-05-15T20:02:22
+347,48,1771,2022-07-28T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-06T20:02:22
+348,184,1593,2022-11-11T20:02:22,Phone,Client called to find out account balance.,2024-05-12T20:02:22
+349,183,1009,2024-02-19T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-06-26T20:02:22
+350,85,1020,2023-05-03T20:02:22,Email,Followed up on the status of the service request.,2024-05-16T20:02:22
+351,8,757,2024-04-22T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-19T20:02:22
+352,160,1756,2021-12-29T20:02:22,Event,Client attended a workshop on digital transformation.,2024-08-03T20:02:22
+353,11,1448,2021-12-07T20:02:22,In Person,Presentation on new product features.,2024-05-19T20:02:22
+354,30,10,2022-11-12T20:02:22,Email,Client requested additional resources via email.,2024-07-18T20:02:22
+355,98,212,2022-09-04T20:02:22,Phone,Answered client questions about the new policy.,2024-06-30T20:02:22
+356,134,509,2021-11-21T20:02:22,Event,Attended a tech conference with the client.,2024-07-30T20:02:22
+357,16,776,2022-09-07T20:02:22,Phone,Client called to find out account balance.,2024-05-29T20:02:22
+358,17,570,2023-03-19T20:02:22,Event,Client attended a workshop on digital transformation.,2024-04-28T20:02:22
+359,98,1228,2023-06-13T20:02:22,Phone,Scheduled a demo for the new software.,2024-04-29T20:02:22
+360,152,1703,2022-03-07T20:02:22,Email,Client requested additional resources via email.,2024-07-20T20:02:22
+361,138,1469,2022-02-11T20:02:22,Email,Followed up on the status of the service request.,2024-05-14T20:02:22
+362,106,1732,2023-09-10T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-05T20:02:22
+363,88,1624,2023-12-09T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-09T20:02:22
+364,12,74,2022-12-09T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-16T20:02:22
+365,8,577,2022-04-12T20:02:22,Phone,Answered client questions about the new policy.,2024-05-04T20:02:22
+366,182,1560,2023-02-20T20:02:22,In Person,Presentation on new product features.,2024-07-06T20:02:22
+367,111,298,2024-07-21T20:02:22,In Person,Discussed security measures and protocols.,2024-05-01T20:02:22
+368,6,826,2022-12-27T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-05-19T20:02:22
+369,124,565,2023-08-24T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-01T20:02:22
+370,78,1248,2022-07-15T20:02:22,Email,Sent client a report on project progress.,2024-05-01T20:02:22
+371,7,1471,2024-01-21T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-13T20:02:22
+372,146,1779,2024-04-23T20:02:22,Event,Attended a tech conference with the client.,2024-07-10T20:02:22
+373,103,1920,2022-11-06T20:02:22,Event,Attended a tech conference with the client.,2024-05-29T20:02:22
+374,60,1035,2022-12-16T20:02:22,In Person,Presentation on new product features.,2024-06-05T20:02:22
+375,72,1332,2023-12-04T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-18T20:02:22
+376,175,969,2022-05-22T20:02:22,Email,Client requested additional resources via email.,2024-05-28T20:02:22
+377,118,682,2023-12-26T20:02:22,Event,Attended a tech conference with the client.,2024-05-09T20:02:22
+378,121,1391,2022-03-14T20:02:22,Event,Attended a tech conference with the client.,2024-07-30T20:02:22
+379,132,1993,2024-04-12T20:02:22,Email,Discussed project timeline via email.,2024-07-12T20:02:22
+380,37,973,2024-05-23T20:02:22,Phone,Client called to find out account balance.,2024-06-22T20:02:22
+381,149,995,2022-10-30T20:02:22,Phone,Client called to find out account balance.,2024-05-26T20:02:22
+382,195,358,2021-11-27T20:02:22,In Person,Discussed security measures and protocols.,2024-07-21T20:02:22
+383,170,30,2024-01-14T20:02:22,Phone,Client called to find out account balance.,2024-07-22T20:02:22
+384,2,1429,2023-09-04T20:02:22,Email,Client requested additional resources via email.,2024-05-26T20:02:22
+385,110,8,2022-09-14T20:02:22,Email,Discussed project timeline via email.,2024-05-25T20:02:22
+386,143,790,2024-04-25T20:02:22,In Person,Discussed security measures and protocols.,2024-04-27T20:02:22
+387,66,1740,2022-02-14T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-10T20:02:22
+388,2,1904,2022-09-04T20:02:22,Event,Attended a tech conference with the client.,2024-07-27T20:02:22
+389,33,296,2021-11-16T20:02:22,In Person,Presentation on new product features.,2024-07-16T20:02:22
+390,46,1649,2022-06-05T20:02:22,Email,Discussed project timeline via email.,2024-05-26T20:02:22
+391,21,6,2023-02-18T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-19T20:02:22
+392,160,436,2024-07-24T20:02:22,Phone,Answered client questions about the new policy.,2024-05-28T20:02:22
+393,113,618,2022-01-18T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-17T20:02:22
+394,177,572,2023-11-09T20:02:22,Event,Client invited to product launch event.,2024-06-29T20:02:22
+395,82,146,2024-01-18T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-05-02T20:02:22
+396,2,604,2022-11-04T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-10T20:02:22
+397,180,357,2024-06-24T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-16T20:02:22
+398,128,736,2023-04-01T20:02:22,In Person,Discussed security measures and protocols.,2024-05-10T20:02:22
+399,72,1564,2023-12-14T20:02:22,Phone,Client called to find out account balance.,2024-05-07T20:02:22
+400,85,4,2022-06-01T20:02:22,Email,Client requested additional resources via email.,2024-06-15T20:02:22
+401,96,210,2023-11-24T20:02:22,In Person,Discussed security measures and protocols.,2024-06-13T20:02:22
+402,166,444,2023-03-26T20:02:22,In Person,Presentation on new product features.,2024-06-03T20:02:22
+403,166,716,2022-02-14T20:02:22,Phone,Scheduled a demo for the new software.,2024-05-21T20:02:22
+404,83,702,2022-06-05T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-20T20:02:22
+405,55,1486,2022-10-06T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-13T20:02:22
+406,54,598,2023-08-26T20:02:22,Event,Client invited to product launch event.,2024-08-02T20:02:22
+407,131,23,2021-12-19T20:02:22,Event,Client invited to product launch event.,2024-05-13T20:02:22
+408,71,1737,2022-02-15T20:02:22,Event,Client attended a workshop on digital transformation.,2024-07-12T20:02:22
+409,63,1522,2022-12-06T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-16T20:02:22
+410,90,834,2023-09-28T20:02:22,Email,Client requested additional resources via email.,2024-05-16T20:02:22
+411,91,1204,2021-12-14T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-08T20:02:22
+412,11,205,2022-06-14T20:02:22,Email,Sent client a report on project progress.,2024-04-27T20:02:22
+413,17,721,2023-10-28T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-20T20:02:22
+414,15,370,2024-07-27T20:02:22,Event,Client invited to product launch event.,2024-05-28T20:02:22
+415,126,1249,2022-07-15T20:02:22,Phone,Client called to find out account balance.,2024-05-19T20:02:22
+416,34,1887,2022-02-17T20:02:22,Event,Attended a tech conference with the client.,2024-05-15T20:02:22
+417,169,1581,2022-11-30T20:02:22,Email,Discussed project timeline via email.,2024-06-11T20:02:22
+418,154,91,2024-06-26T20:02:22,Email,Sent client a report on project progress.,2024-05-16T20:02:22
+419,160,489,2024-01-04T20:02:22,Email,Sent client a report on project progress.,2024-04-30T20:02:22
+420,35,1275,2022-12-08T20:02:22,Phone,Client called to find out account balance.,2024-07-13T20:02:22
+421,181,1514,2022-02-27T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-06T20:02:22
+422,2,1091,2022-09-06T20:02:22,Email,Client requested additional resources via email.,2024-05-27T20:02:22
+423,73,480,2022-10-27T20:02:22,In Person,Presentation on new product features.,2024-05-04T20:02:22
+424,69,293,2024-05-18T20:02:22,Event,Attended a tech conference with the client.,2024-07-25T20:02:22
+425,93,347,2023-10-14T20:02:22,In Person,Discussed security measures and protocols.,2024-07-17T20:02:22
+426,27,1097,2023-08-20T20:02:22,Event,Client attended a workshop on digital transformation.,2024-05-26T20:02:22
+427,103,1370,2023-03-10T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-30T20:02:22
+428,183,1746,2023-12-23T20:02:22,Event,Client attended a workshop on digital transformation.,2024-05-28T20:02:22
+429,145,329,2024-01-03T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-06T20:02:22
+430,165,1791,2023-11-06T20:02:22,Email,Discussed project timeline via email.,2024-06-01T20:02:22
+431,127,951,2024-07-14T20:02:22,Email,Client requested additional resources via email.,2024-06-03T20:02:22
+432,125,1388,2023-05-13T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-10T20:02:22
+433,54,1061,2023-10-26T20:02:22,Email,Client requested additional resources via email.,2024-05-10T20:02:22
+434,21,832,2023-06-02T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-11T20:02:22
+435,141,1148,2023-12-20T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-04T20:02:22
+436,159,1511,2022-04-27T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-21T20:02:22
+437,132,1637,2024-03-09T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-05-18T20:02:22
+438,196,1266,2024-02-27T20:02:22,In Person,Presentation on new product features.,2024-07-11T20:02:22
+439,11,745,2023-04-25T20:02:22,Event,Client invited to product launch event.,2024-06-18T20:02:22
+440,138,1147,2023-07-04T20:02:22,In Person,Presentation on new product features.,2024-07-01T20:02:22
+441,88,1624,2022-06-22T20:02:22,Event,Attended a tech conference with the client.,2024-06-18T20:02:22
+442,185,475,2023-03-18T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-22T20:02:22
+443,6,819,2023-08-02T20:02:22,Event,Attended a tech conference with the client.,2024-05-26T20:02:22
+444,6,1823,2023-10-12T20:02:22,Event,Client invited to product launch event.,2024-07-19T20:02:22
+445,132,1705,2022-11-21T20:02:22,In Person,Discussed security measures and protocols.,2024-05-22T20:02:22
+446,191,13,2024-05-23T20:02:22,Phone,Client called to find out account balance.,2024-06-28T20:02:22
+447,175,1347,2023-12-09T20:02:22,Phone,Client called to find out account balance.,2024-07-26T20:02:22
+448,151,136,2022-03-15T20:02:22,Event,Attended a tech conference with the client.,2024-06-01T20:02:22
+449,39,1301,2023-02-14T20:02:22,Email,Discussed project timeline via email.,2024-07-03T20:02:22
+450,72,517,2024-06-10T20:02:22,Phone,Scheduled a demo for the new software.,2024-05-20T20:02:22
+451,68,856,2021-12-05T20:02:22,Email,Discussed project timeline via email.,2024-05-24T20:02:22
+452,144,1782,2022-10-03T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-16T20:02:22
+453,25,154,2023-09-11T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-03T20:02:22
+454,145,1582,2023-05-04T20:02:22,Phone,Client called to find out account balance.,2024-07-20T20:02:22
+455,153,1664,2023-11-22T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-27T20:02:22
+456,95,727,2022-02-18T20:02:22,Event,Client attended a workshop on digital transformation.,2024-05-19T20:02:22
+457,128,1064,2023-07-17T20:02:22,Event,Client attended a workshop on digital transformation.,2024-07-02T20:02:22
+458,38,1734,2022-07-17T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-06-16T20:02:22
+459,156,816,2022-11-23T20:02:22,Email,Sent client a report on project progress.,2024-04-30T20:02:22
+460,123,939,2023-03-24T20:02:22,Phone,Client called to find out account balance.,2024-05-25T20:02:22
+461,59,1223,2023-08-01T20:02:22,Email,Sent client a report on project progress.,2024-07-12T20:02:22
+462,44,1143,2022-11-16T20:02:22,Email,Sent client a report on project progress.,2024-06-25T20:02:22
+463,52,1323,2023-01-07T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-05-19T20:02:22
+464,4,209,2024-01-05T20:02:22,In Person,Presentation on new product features.,2024-06-10T20:02:22
+465,165,1112,2021-12-03T20:02:22,Email,Followed up on the status of the service request.,2024-07-12T20:02:22
+466,171,791,2022-05-24T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-02T20:02:22
+467,113,417,2024-01-08T20:02:22,In Person,Discussed security measures and protocols.,2024-04-27T20:02:22
+468,50,1160,2022-08-05T20:02:22,In Person,Presentation on new product features.,2024-05-04T20:02:22
+469,129,56,2024-04-14T20:02:22,Email,Sent client a report on project progress.,2024-07-27T20:02:22
+470,36,159,2023-12-24T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-05-30T20:02:22
+471,79,891,2022-08-11T20:02:22,Phone,Answered client questions about the new policy.,2024-06-07T20:02:22
+472,117,151,2023-06-25T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-17T20:02:22
+473,151,1819,2022-12-08T20:02:22,Phone,Answered client questions about the new policy.,2024-07-28T20:02:22
+474,132,617,2023-07-04T20:02:22,Email,Sent client a report on project progress.,2024-07-31T20:02:22
+475,25,154,2022-04-21T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-19T20:02:22
+476,86,765,2023-09-11T20:02:22,Event,Client invited to product launch event.,2024-06-08T20:02:22
+477,52,483,2024-02-06T20:02:22,In Person,Presentation on new product features.,2024-06-08T20:02:22
+478,138,1220,2024-03-17T20:02:22,Phone,Client called to find out account balance.,2024-06-29T20:02:22
+479,147,664,2024-02-12T20:02:22,Event,Client invited to product launch event.,2024-07-05T20:02:22
+480,27,1725,2022-08-01T20:02:22,Phone,Scheduled a demo for the new software.,2024-05-21T20:02:22
+481,122,1070,2022-02-14T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-06T20:02:22
+482,17,570,2022-07-04T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-05-05T20:02:22
+483,134,1911,2022-08-15T20:02:22,Event,Client attended a workshop on digital transformation.,2024-05-11T20:02:22
+484,49,502,2022-09-09T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-06-23T20:02:22
+485,129,906,2022-11-16T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-01T20:02:22
+486,5,434,2022-11-13T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-05-25T20:02:22
+487,23,377,2022-09-26T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-08T20:02:22
+488,164,130,2023-03-19T20:02:22,Email,Sent client a report on project progress.,2024-05-24T20:02:22
+489,184,320,2024-03-29T20:02:22,Phone,Answered client questions about the new policy.,2024-05-20T20:02:22
+490,35,810,2022-07-23T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-13T20:02:22
+491,15,400,2022-06-14T20:02:22,Event,Client invited to product launch event.,2024-05-06T20:02:22
+492,173,1831,2023-02-13T20:02:22,Event,Attended a tech conference with the client.,2024-05-21T20:02:22
+493,17,769,2023-11-14T20:02:22,Phone,Answered client questions about the new policy.,2024-05-14T20:02:22
+494,137,743,2023-04-22T20:02:22,Email,Followed up on the status of the service request.,2024-07-14T20:02:22
+495,124,1130,2022-12-01T20:02:22,Email,Followed up on the status of the service request.,2024-06-19T20:02:22
+496,168,1750,2024-07-30T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-28T20:02:22
+497,193,566,2023-11-23T20:02:22,Email,Discussed project timeline via email.,2024-05-18T20:02:22
+498,81,315,2024-06-03T20:02:22,Email,Sent client a report on project progress.,2024-07-22T20:02:22
+499,49,662,2024-03-17T20:02:22,Phone,Client called to find out account balance.,2024-05-04T20:02:22
+500,156,930,2024-05-06T20:02:22,Event,Client invited to product launch event.,2024-05-09T20:02:22
+501,4,425,2024-06-06T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-17T20:02:22
+502,79,891,2024-07-28T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-06T20:02:22
+503,121,101,2023-10-15T20:02:22,Event,Client invited to product launch event.,2024-05-18T20:02:22
+504,177,1360,2023-11-03T20:02:22,Email,Sent client a report on project progress.,2024-07-15T20:02:22
+505,169,1357,2023-02-22T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-08-04T20:02:22
+506,35,1275,2023-03-26T20:02:22,Event,Client attended a workshop on digital transformation.,2024-05-29T20:02:22
+507,137,613,2023-10-29T20:02:22,Phone,Client called to find out account balance.,2024-04-28T20:02:22
+508,105,1185,2022-06-16T20:02:22,In Person,Discussed security measures and protocols.,2024-05-27T20:02:22
+509,36,666,2022-11-17T20:02:22,Event,Client invited to product launch event.,2024-07-14T20:02:22
+510,186,1482,2024-05-18T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-06-04T20:02:22
+511,23,1691,2024-05-09T20:02:22,Phone,Answered client questions about the new policy.,2024-05-18T20:02:22
+512,38,917,2021-11-17T20:02:22,Email,Discussed project timeline via email.,2024-06-15T20:02:22
+513,95,987,2022-07-03T20:02:22,Event,Attended a tech conference with the client.,2024-05-26T20:02:22
+514,67,1043,2023-05-14T20:02:22,Email,Sent client a report on project progress.,2024-05-21T20:02:22
+515,76,1082,2022-10-15T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-30T20:02:22
+516,120,955,2023-09-30T20:02:22,Phone,Scheduled a demo for the new software.,2024-05-12T20:02:22
+517,14,1796,2022-03-04T20:02:22,Email,Sent client a report on project progress.,2024-05-18T20:02:22
+518,129,448,2022-03-25T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-06T20:02:22
+519,184,411,2023-06-02T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-09T20:02:22
+520,89,1966,2023-10-06T20:02:22,Event,Attended a tech conference with the client.,2024-05-23T20:02:22
+521,133,784,2023-07-03T20:02:22,Event,Attended a tech conference with the client.,2024-06-18T20:02:22
+522,47,1078,2024-07-27T20:02:22,Email,Client requested additional resources via email.,2024-05-17T20:02:22
+523,138,786,2023-11-07T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-04-28T20:02:22
+524,97,1373,2022-03-25T20:02:22,Event,Attended a tech conference with the client.,2024-07-10T20:02:22
+525,8,761,2022-06-27T20:02:22,Event,Attended a tech conference with the client.,2024-05-01T20:02:22
+526,192,1416,2023-04-09T20:02:22,Event,Attended a tech conference with the client.,2024-05-28T20:02:22
+527,36,349,2022-12-02T20:02:22,Email,Followed up on the status of the service request.,2024-06-02T20:02:22
+528,69,1286,2024-04-04T20:02:22,Email,Client requested additional resources via email.,2024-05-18T20:02:22
+529,188,596,2024-05-14T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-10T20:02:22
+530,131,587,2022-08-12T20:02:22,Email,Discussed project timeline via email.,2024-05-23T20:02:22
+531,117,1614,2022-08-14T20:02:22,Phone,Scheduled a demo for the new software.,2024-05-20T20:02:22
+532,55,69,2023-01-10T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-26T20:02:22
+533,93,1462,2023-02-02T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-02T20:02:22
+534,21,1404,2023-01-27T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-05T20:02:22
+535,27,362,2024-06-05T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-07T20:02:22
+536,55,1809,2022-09-05T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-08-01T20:02:22
+537,27,11,2023-12-20T20:02:22,In Person,Presentation on new product features.,2024-07-24T20:02:22
+538,112,512,2024-07-29T20:02:22,Email,Client requested additional resources via email.,2024-06-01T20:02:22
+539,172,782,2023-04-13T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-09T20:02:22
+540,170,1210,2023-06-13T20:02:22,Email,Followed up on the status of the service request.,2024-06-02T20:02:22
+541,6,750,2023-08-15T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-18T20:02:22
+542,27,730,2023-03-05T20:02:22,In Person,Presentation on new product features.,2024-05-23T20:02:22
+543,129,1194,2023-01-15T20:02:22,In Person,Discussed security measures and protocols.,2024-06-29T20:02:22
+544,157,542,2023-12-06T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-02T20:02:22
+545,51,1743,2023-09-19T20:02:22,Phone,Answered client questions about the new policy.,2024-06-04T20:02:22
+546,84,1841,2023-07-29T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-26T20:02:22
+547,42,343,2023-11-10T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-01T20:02:22
+548,72,1564,2024-07-27T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-11T20:02:22
+549,25,134,2023-04-07T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-04T20:02:22
+550,71,1495,2022-08-16T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-06-13T20:02:22
+551,119,560,2022-12-04T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-21T20:02:22
+552,2,604,2022-09-27T20:02:22,Event,Attended a tech conference with the client.,2024-06-04T20:02:22
+553,89,1966,2024-03-13T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-06T20:02:22
+554,160,1877,2022-04-25T20:02:22,Email,Followed up on the status of the service request.,2024-06-18T20:02:22
+555,131,181,2023-09-02T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-02T20:02:22
+556,151,78,2023-12-23T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-18T20:02:22
+557,121,428,2023-11-18T20:02:22,In Person,Presentation on new product features.,2024-05-17T20:02:22
+558,139,1673,2022-06-16T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-11T20:02:22
+559,195,358,2022-01-09T20:02:22,Email,Followed up on the status of the service request.,2024-05-13T20:02:22
+560,141,1558,2024-03-02T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-05-16T20:02:22
+561,48,848,2022-07-20T20:02:22,Event,Client invited to product launch event.,2024-05-25T20:02:22
+562,37,1022,2023-12-30T20:02:22,Email,Sent client a report on project progress.,2024-07-16T20:02:22
+563,139,1955,2024-04-14T20:02:22,Phone,Answered client questions about the new policy.,2024-06-23T20:02:22
+564,161,1776,2024-06-14T20:02:22,In Person,Discussed security measures and protocols.,2024-06-29T20:02:22
+565,193,1229,2023-11-09T20:02:22,Event,Client invited to product launch event.,2024-06-23T20:02:22
+566,152,392,2023-10-28T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-05T20:02:22
+567,50,398,2023-04-21T20:02:22,Event,Client invited to product launch event.,2024-04-29T20:02:22
+568,98,118,2021-11-29T20:02:22,Email,Client requested additional resources via email.,2024-06-30T20:02:22
+569,173,1550,2024-06-16T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-12T20:02:22
+570,72,718,2022-06-04T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-05T20:02:22
+571,70,117,2022-05-15T20:02:22,Email,Sent client a report on project progress.,2024-06-21T20:02:22
+572,72,718,2021-12-27T20:02:22,Event,Client attended a workshop on digital transformation.,2024-07-03T20:02:22
+573,166,1872,2023-03-06T20:02:22,Event,Client attended a workshop on digital transformation.,2024-07-29T20:02:22
+574,66,250,2023-02-16T20:02:22,In Person,Discussed security measures and protocols.,2024-06-02T20:02:22
+575,132,882,2021-11-26T20:02:22,Email,Followed up on the status of the service request.,2024-05-23T20:02:22
+576,6,826,2022-11-05T20:02:22,Email,Followed up on the status of the service request.,2024-06-28T20:02:22
+577,128,977,2024-03-10T20:02:22,Email,Discussed project timeline via email.,2024-05-30T20:02:22
+578,197,1608,2024-06-17T20:02:22,Email,Sent client a report on project progress.,2024-05-14T20:02:22
+579,167,806,2022-06-03T20:02:22,Email,Discussed project timeline via email.,2024-04-27T20:02:22
+580,132,842,2023-04-06T20:02:22,Email,Client requested additional resources via email.,2024-05-01T20:02:22
+581,58,1281,2022-08-06T20:02:22,Event,Attended a tech conference with the client.,2024-06-14T20:02:22
+582,38,917,2022-04-19T20:02:22,Phone,Answered client questions about the new policy.,2024-06-21T20:02:22
+583,127,943,2022-12-08T20:02:22,In Person,Discussed security measures and protocols.,2024-06-19T20:02:22
+584,128,1915,2024-02-27T20:02:22,Email,Discussed project timeline via email.,2024-06-28T20:02:22
+585,149,1744,2022-10-25T20:02:22,Phone,Answered client questions about the new policy.,2024-05-04T20:02:22
+586,185,442,2023-03-26T20:02:22,Phone,Client called to find out account balance.,2024-05-17T20:02:22
+587,185,442,2023-10-09T20:02:22,Email,Discussed project timeline via email.,2024-05-21T20:02:22
+588,13,1665,2022-04-10T20:02:22,Phone,Client called to find out account balance.,2024-07-12T20:02:22
+589,52,1345,2023-06-23T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-29T20:02:22
+590,123,875,2024-05-02T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-08-01T20:02:22
+591,20,521,2022-10-26T20:02:22,Email,Discussed project timeline via email.,2024-06-24T20:02:22
+592,131,385,2023-05-21T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-14T20:02:22
+593,142,1988,2022-03-11T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-11T20:02:22
+594,15,337,2024-06-17T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-30T20:02:22
+595,69,437,2022-04-27T20:02:22,Email,Discussed project timeline via email.,2024-08-03T20:02:22
+596,160,1756,2022-02-11T20:02:22,Email,Client requested additional resources via email.,2024-06-10T20:02:22
+597,17,12,2022-07-10T20:02:22,Phone,Scheduled a demo for the new software.,2024-05-26T20:02:22
+598,24,740,2022-12-17T20:02:22,Email,Sent client a report on project progress.,2024-07-12T20:02:22
+599,25,148,2022-06-12T20:02:22,Event,Client attended a workshop on digital transformation.,2024-07-10T20:02:22
+600,125,963,2023-09-19T20:02:22,Event,Client invited to product launch event.,2024-07-25T20:02:22
+601,153,1664,2022-07-09T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-04T20:02:22
+602,144,162,2022-09-07T20:02:22,Email,Client requested additional resources via email.,2024-07-03T20:02:22
+603,139,1557,2023-05-24T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-05-22T20:02:22
+604,9,1177,2023-03-08T20:02:22,Email,Discussed project timeline via email.,2024-06-02T20:02:22
+605,17,390,2022-07-23T20:02:22,Email,Sent client a report on project progress.,2024-06-21T20:02:22
+606,129,56,2022-07-27T20:02:22,Email,Client requested additional resources via email.,2024-05-07T20:02:22
+607,8,761,2023-09-02T20:02:22,In Person,Discussed security measures and protocols.,2024-05-04T20:02:22
+608,159,141,2023-11-10T20:02:22,Event,Attended a tech conference with the client.,2024-07-23T20:02:22
+609,105,959,2022-02-20T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-05T20:02:22
+610,128,1915,2024-04-19T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-01T20:02:22
+611,107,133,2022-02-22T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-14T20:02:22
+612,139,946,2024-06-21T20:02:22,In Person,Discussed security measures and protocols.,2024-05-08T20:02:22
+613,103,96,2022-07-28T20:02:22,Email,Discussed project timeline via email.,2024-04-29T20:02:22
+614,162,82,2022-10-25T20:02:22,Email,Client requested additional resources via email.,2024-07-10T20:02:22
+615,176,1529,2022-11-17T20:02:22,Phone,Scheduled a demo for the new software.,2024-04-30T20:02:22
+616,126,1717,2022-11-13T20:02:22,Phone,Answered client questions about the new policy.,2024-07-05T20:02:22
+617,15,1945,2023-06-22T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-06-25T20:02:22
+618,78,1248,2023-12-07T20:02:22,Email,Sent client a report on project progress.,2024-06-26T20:02:22
+619,6,1136,2023-06-07T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-27T20:02:22
+620,184,468,2022-11-23T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-04-28T20:02:22
+621,82,1598,2022-10-31T20:02:22,Email,Sent client a report on project progress.,2024-05-07T20:02:22
+622,187,240,2022-10-08T20:02:22,In Person,Discussed security measures and protocols.,2024-04-29T20:02:22
+623,15,1199,2023-11-06T20:02:22,Event,Attended a tech conference with the client.,2024-07-27T20:02:22
+624,84,632,2022-04-03T20:02:22,In Person,Discussed security measures and protocols.,2024-05-10T20:02:22
+625,84,1392,2022-10-07T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-05-31T20:02:22
+626,130,1002,2022-03-25T20:02:22,In Person,Presentation on new product features.,2024-05-09T20:02:22
+627,113,589,2024-02-02T20:02:22,Email,Client requested additional resources via email.,2024-06-19T20:02:22
+628,118,787,2023-04-12T20:02:22,Email,Discussed project timeline via email.,2024-05-03T20:02:22
+629,110,236,2024-07-01T20:02:22,Phone,Client called to find out account balance.,2024-07-14T20:02:22
+630,42,273,2023-12-03T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-23T20:02:22
+631,156,562,2022-10-10T20:02:22,Email,Followed up on the status of the service request.,2024-05-06T20:02:22
+632,186,418,2024-02-16T20:02:22,Email,Sent client a report on project progress.,2024-05-14T20:02:22
+633,162,1641,2023-07-31T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-20T20:02:22
+634,82,146,2022-04-20T20:02:22,Event,Client attended a workshop on digital transformation.,2024-07-02T20:02:22
+635,16,926,2022-04-10T20:02:22,In Person,Presentation on new product features.,2024-05-06T20:02:22
+636,118,525,2023-05-20T20:02:22,In Person,Discussed security measures and protocols.,2024-06-29T20:02:22
+637,50,1160,2021-11-14T20:02:22,Event,Client invited to product launch event.,2024-04-28T20:02:22
+638,151,1028,2022-06-26T20:02:22,Email,Discussed project timeline via email.,2024-06-23T20:02:22
+639,64,333,2023-06-02T20:02:22,In Person,Presentation on new product features.,2024-05-28T20:02:22
+640,27,1725,2022-04-02T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-21T20:02:22
+641,134,1990,2023-10-15T20:02:22,In Person,Discussed security measures and protocols.,2024-06-08T20:02:22
+642,163,1932,2022-07-16T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-30T20:02:22
+643,21,6,2023-02-15T20:02:22,Phone,Client called to find out account balance.,2024-06-10T20:02:22
+644,11,470,2023-03-16T20:02:22,In Person,Discussed security measures and protocols.,2024-07-25T20:02:22
+645,105,1024,2023-07-03T20:02:22,In Person,Discussed security measures and protocols.,2024-05-01T20:02:22
+646,109,571,2022-05-30T20:02:22,Email,Followed up on the status of the service request.,2024-07-14T20:02:22
+647,197,1419,2022-03-04T20:02:22,Email,Discussed project timeline via email.,2024-05-05T20:02:22
+648,176,1821,2023-04-27T20:02:22,Email,Client requested additional resources via email.,2024-04-27T20:02:22
+649,91,582,2023-01-17T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-16T20:02:22
+650,63,1522,2023-05-31T20:02:22,Email,Client requested additional resources via email.,2024-06-26T20:02:22
+651,190,1438,2022-03-18T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-25T20:02:22
+652,160,1683,2023-02-01T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-08T20:02:22
+653,154,1231,2022-03-13T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-19T20:02:22
+654,70,1151,2024-02-03T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-05T20:02:22
+655,112,1931,2022-11-17T20:02:22,Event,Attended a tech conference with the client.,2024-05-17T20:02:22
+656,125,653,2023-10-24T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-16T20:02:22
+657,124,432,2024-04-14T20:02:22,Email,Followed up on the status of the service request.,2024-07-29T20:02:22
+658,129,1346,2023-11-09T20:02:22,Email,Followed up on the status of the service request.,2024-07-09T20:02:22
+659,117,1425,2024-07-24T20:02:22,In Person,Presentation on new product features.,2024-05-30T20:02:22
+660,175,1579,2022-09-27T20:02:22,In Person,Presentation on new product features.,2024-05-05T20:02:22
+661,175,1712,2022-02-22T20:02:22,Phone,Scheduled a demo for the new software.,2024-05-29T20:02:22
+662,165,484,2023-05-28T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-14T20:02:22
+663,191,1267,2023-02-01T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-08-03T20:02:22
+664,134,509,2023-07-17T20:02:22,Email,Sent client a report on project progress.,2024-05-09T20:02:22
+665,115,1305,2022-11-20T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-17T20:02:22
+666,153,623,2021-11-21T20:02:22,Event,Attended a tech conference with the client.,2024-04-29T20:02:22
+667,153,881,2024-04-08T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-19T20:02:22
+668,125,1941,2022-08-15T20:02:22,Phone,Answered client questions about the new policy.,2024-05-27T20:02:22
+669,24,1874,2021-12-23T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-05-18T20:02:22
+670,63,1522,2022-10-12T20:02:22,Email,Discussed project timeline via email.,2024-06-06T20:02:22
+671,131,1380,2022-05-16T20:02:22,Event,Attended a tech conference with the client.,2024-06-14T20:02:22
+672,2,1385,2023-12-14T20:02:22,Event,Attended a tech conference with the client.,2024-06-13T20:02:22
+673,29,1667,2022-09-27T20:02:22,Event,Client attended a workshop on digital transformation.,2024-04-27T20:02:22
+674,116,1555,2022-05-26T20:02:22,Email,Client requested additional resources via email.,2024-07-10T20:02:22
+675,19,140,2023-04-15T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-17T20:02:22
+676,20,33,2022-05-05T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-01T20:02:22
+677,74,1481,2023-02-25T20:02:22,Email,Discussed project timeline via email.,2024-07-10T20:02:22
+678,45,853,2023-11-13T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-06-26T20:02:22
+679,156,619,2022-01-25T20:02:22,In Person,Discussed security measures and protocols.,2024-06-26T20:02:22
+680,37,1327,2022-05-14T20:02:22,Phone,Client called to find out account balance.,2024-06-06T20:02:22
+681,39,230,2023-07-11T20:02:22,Event,Client invited to product launch event.,2024-05-01T20:02:22
+682,175,1568,2022-07-03T20:02:22,Email,Sent client a report on project progress.,2024-06-26T20:02:22
+683,142,1066,2024-06-12T20:02:22,Email,Discussed project timeline via email.,2024-05-31T20:02:22
+684,184,1211,2024-07-11T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-30T20:02:22
+685,38,172,2023-06-22T20:02:22,Email,Client requested additional resources via email.,2024-08-02T20:02:22
+686,174,1635,2024-01-28T20:02:22,In Person,Discussed security measures and protocols.,2024-05-17T20:02:22
+687,190,1326,2022-11-28T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-21T20:02:22
+688,121,428,2023-03-28T20:02:22,In Person,Discussed security measures and protocols.,2024-05-14T20:02:22
+689,118,352,2023-09-12T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-15T20:02:22
+690,187,1965,2022-08-29T20:02:22,Email,Client requested additional resources via email.,2024-07-23T20:02:22
+691,101,1149,2022-05-26T20:02:22,Email,Sent client a report on project progress.,2024-06-17T20:02:22
+692,111,298,2024-05-10T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-15T20:02:22
+693,31,3,2022-09-24T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-22T20:02:22
+694,9,978,2022-02-01T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-21T20:02:22
+695,192,1263,2023-12-25T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-19T20:02:22
+696,174,54,2022-03-12T20:02:22,Event,Client invited to product launch event.,2024-04-30T20:02:22
+697,200,850,2022-05-13T20:02:22,Email,Client requested additional resources via email.,2024-07-22T20:02:22
+698,113,158,2023-08-22T20:02:22,Phone,Scheduled a demo for the new software.,2024-05-17T20:02:22
+699,187,1390,2022-04-05T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-04-28T20:02:22
+700,8,364,2022-04-26T20:02:22,Event,Attended a tech conference with the client.,2024-06-10T20:02:22
+701,69,800,2024-04-14T20:02:22,Event,Client invited to product launch event.,2024-07-07T20:02:22
+702,172,1472,2024-05-19T20:02:22,In Person,Discussed security measures and protocols.,2024-05-06T20:02:22
+703,162,330,2024-01-26T20:02:22,Phone,Client called to find out account balance.,2024-05-18T20:02:22
+704,56,642,2023-10-31T20:02:22,Phone,Client called to find out account balance.,2024-05-28T20:02:22
+705,55,1809,2022-03-29T20:02:22,In Person,Presentation on new product features.,2024-06-27T20:02:22
+706,122,321,2024-02-16T20:02:22,Email,Followed up on the status of the service request.,2024-05-27T20:02:22
+707,7,1034,2024-01-29T20:02:22,Email,Client requested additional resources via email.,2024-05-28T20:02:22
+708,133,1268,2022-07-17T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-20T20:02:22
+709,5,1512,2022-05-03T20:02:22,Email,Discussed project timeline via email.,2024-07-22T20:02:22
+710,26,1612,2022-07-18T20:02:22,Event,Client invited to product launch event.,2024-06-02T20:02:22
+711,134,1948,2023-11-30T20:02:22,In Person,Presentation on new product features.,2024-06-06T20:02:22
+712,43,163,2023-01-19T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-20T20:02:22
+713,13,182,2023-11-18T20:02:22,Phone,Answered client questions about the new policy.,2024-05-14T20:02:22
+714,196,817,2023-03-18T20:02:22,In Person,Discussed security measures and protocols.,2024-05-24T20:02:22
+715,24,1874,2022-12-31T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-06-01T20:02:22
+716,162,1641,2024-05-06T20:02:22,Event,Client invited to product launch event.,2024-06-23T20:02:22
+717,10,1386,2023-12-26T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-23T20:02:22
+718,175,1712,2023-07-04T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-22T20:02:22
+719,110,756,2023-11-25T20:02:22,Phone,Client called to find out account balance.,2024-07-01T20:02:22
+720,31,838,2023-10-29T20:02:22,Email,Client requested additional resources via email.,2024-06-21T20:02:22
+721,184,1666,2023-03-16T20:02:22,Phone,Answered client questions about the new policy.,2024-07-31T20:02:22
+722,15,337,2023-09-01T20:02:22,Event,Client invited to product launch event.,2024-05-02T20:02:22
+723,22,124,2023-01-06T20:02:22,Email,Followed up on the status of the service request.,2024-08-04T20:02:22
+724,96,1927,2022-02-19T20:02:22,Phone,Client called to find out account balance.,2024-05-04T20:02:22
+725,161,1375,2023-09-07T20:02:22,Email,Client requested additional resources via email.,2024-07-22T20:02:22
+726,167,1190,2022-02-18T20:02:22,Phone,Answered client questions about the new policy.,2024-06-03T20:02:22
+727,46,31,2024-04-21T20:02:22,Email,Client requested additional resources via email.,2024-06-14T20:02:22
+728,164,1951,2022-10-05T20:02:22,Email,Client requested additional resources via email.,2024-06-23T20:02:22
+729,52,1162,2024-05-12T20:02:22,Email,Client requested additional resources via email.,2024-06-19T20:02:22
+730,39,1083,2022-07-31T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-03T20:02:22
+731,45,877,2023-03-05T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-08T20:02:22
+732,126,493,2023-06-26T20:02:22,Email,Followed up on the status of the service request.,2024-05-02T20:02:22
+733,117,1944,2022-02-07T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-05-10T20:02:22
+734,31,1352,2024-01-04T20:02:22,Phone,Client called to find out account balance.,2024-06-25T20:02:22
+735,152,690,2024-05-21T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-04-30T20:02:22
+736,117,1716,2023-02-21T20:02:22,Phone,Client called to find out account balance.,2024-05-03T20:02:22
+737,51,19,2024-05-27T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-19T20:02:22
+738,142,1999,2022-11-12T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-08-04T20:02:22
+739,115,1713,2022-06-26T20:02:22,Email,Followed up on the status of the service request.,2024-07-10T20:02:22
+740,90,1567,2023-07-10T20:02:22,Phone,Answered client questions about the new policy.,2024-07-17T20:02:22
+741,110,970,2022-05-20T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-04-27T20:02:22
+742,21,1075,2021-12-03T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-20T20:02:22
+743,147,1109,2022-12-29T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-27T20:02:22
+744,81,324,2024-03-04T20:02:22,Email,Sent client a report on project progress.,2024-06-10T20:02:22
+745,22,1458,2022-11-22T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-27T20:02:22
+746,70,285,2022-06-09T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-20T20:02:22
+747,73,1470,2023-02-07T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-23T20:02:22
+748,142,155,2022-08-15T20:02:22,In Person,Discussed security measures and protocols.,2024-05-04T20:02:22
+749,49,685,2023-07-09T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-17T20:02:22
+750,181,1873,2024-02-14T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-06T20:02:22
+751,81,584,2024-06-18T20:02:22,Email,Followed up on the status of the service request.,2024-06-03T20:02:22
+752,113,1055,2022-06-22T20:02:22,Email,Client requested additional resources via email.,2024-08-03T20:02:22
+753,88,1973,2023-01-09T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-19T20:02:22
+754,7,1034,2022-09-21T20:02:22,Email,Client requested additional resources via email.,2024-06-02T20:02:22
+755,17,769,2022-11-27T20:02:22,Email,Discussed project timeline via email.,2024-05-16T20:02:22
+756,89,1129,2023-02-01T20:02:22,Phone,Answered client questions about the new policy.,2024-08-01T20:02:22
+757,11,625,2022-01-25T20:02:22,Email,Sent client a report on project progress.,2024-07-02T20:02:22
+758,131,1468,2022-01-16T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-16T20:02:22
+759,152,1703,2023-10-25T20:02:22,Email,Followed up on the status of the service request.,2024-06-02T20:02:22
+760,55,70,2023-07-16T20:02:22,Email,Followed up on the status of the service request.,2024-07-21T20:02:22
+761,195,696,2023-06-21T20:02:22,Email,Discussed project timeline via email.,2024-07-11T20:02:22
+762,20,50,2022-06-12T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-10T20:02:22
+763,98,551,2023-01-12T20:02:22,In Person,Discussed security measures and protocols.,2024-05-17T20:02:22
+764,145,422,2022-05-02T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-28T20:02:22
+765,21,1956,2022-09-25T20:02:22,Phone,Client called to find out account balance.,2024-05-22T20:02:22
+766,41,1692,2021-11-29T20:02:22,Event,Client invited to product launch event.,2024-07-27T20:02:22
+767,151,925,2021-12-01T20:02:22,In Person,Discussed security measures and protocols.,2024-05-16T20:02:22
+768,172,318,2022-12-03T20:02:22,Email,Client requested additional resources via email.,2024-07-11T20:02:22
+769,155,858,2022-07-22T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-11T20:02:22
+770,136,708,2024-01-16T20:02:22,Phone,Client called to find out account balance.,2024-07-21T20:02:22
+771,144,1812,2022-03-09T20:02:22,In Person,Discussed security measures and protocols.,2024-05-20T20:02:22
+772,113,1731,2024-06-29T20:02:22,Phone,Answered client questions about the new policy.,2024-06-27T20:02:22
+773,41,1849,2022-06-29T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-05T20:02:22
+774,113,328,2023-09-12T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-17T20:02:22
+775,127,1212,2022-02-14T20:02:22,Phone,Answered client questions about the new policy.,2024-06-21T20:02:22
+776,6,1823,2023-08-01T20:02:22,Event,Attended a tech conference with the client.,2024-06-15T20:02:22
+777,185,663,2021-12-08T20:02:22,Phone,Answered client questions about the new policy.,2024-07-03T20:02:22
+778,53,147,2024-02-14T20:02:22,Phone,Client called to find out account balance.,2024-07-14T20:02:22
+779,59,1018,2023-03-14T20:02:22,Event,Attended a tech conference with the client.,2024-06-06T20:02:22
+780,74,1377,2022-10-20T20:02:22,In Person,Discussed security measures and protocols.,2024-05-13T20:02:22
+781,135,424,2023-03-10T20:02:22,Phone,Client called to find out account balance.,2024-06-03T20:02:22
+782,119,1336,2022-10-27T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-29T20:02:22
+783,120,1349,2023-05-05T20:02:22,In Person,Discussed security measures and protocols.,2024-07-06T20:02:22
+784,145,865,2023-03-12T20:02:22,Email,Client requested additional resources via email.,2024-07-08T20:02:22
+785,154,1946,2022-09-23T20:02:22,Event,Client invited to product launch event.,2024-08-04T20:02:22
+786,42,343,2024-04-21T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-10T20:02:22
+787,72,1118,2022-10-23T20:02:22,Email,Followed up on the status of the service request.,2024-07-25T20:02:22
+788,174,1671,2023-11-19T20:02:22,Phone,Answered client questions about the new policy.,2024-07-25T20:02:22
+789,78,472,2023-11-19T20:02:22,Email,Client requested additional resources via email.,2024-05-16T20:02:22
+790,14,1318,2022-06-18T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-19T20:02:22
+791,195,513,2023-04-03T20:02:22,Email,Sent client a report on project progress.,2024-07-13T20:02:22
+792,129,1138,2022-09-22T20:02:22,Email,Sent client a report on project progress.,2024-06-21T20:02:22
+793,198,1806,2022-04-25T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-19T20:02:22
+794,60,1399,2023-08-08T20:02:22,Email,Followed up on the status of the service request.,2024-07-28T20:02:22
+795,145,865,2023-10-16T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-21T20:02:22
+796,63,1583,2023-11-09T20:02:22,Email,Client requested additional resources via email.,2024-06-13T20:02:22
+797,158,862,2024-03-12T20:02:22,Event,Client attended a workshop on digital transformation.,2024-07-21T20:02:22
+798,92,1519,2023-01-07T20:02:22,Email,Sent client a report on project progress.,2024-06-08T20:02:22
+799,147,932,2023-09-08T20:02:22,Email,Client requested additional resources via email.,2024-07-30T20:02:22
+800,126,38,2023-07-01T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-12T20:02:22
+801,15,400,2021-12-19T20:02:22,In Person,Presentation on new product features.,2024-05-11T20:02:22
+802,22,1570,2022-08-12T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-22T20:02:22
+803,174,1635,2023-03-26T20:02:22,In Person,Discussed security measures and protocols.,2024-05-12T20:02:22
+804,126,254,2024-07-30T20:02:22,Email,Discussed project timeline via email.,2024-07-03T20:02:22
+805,136,708,2021-12-05T20:02:22,Email,Discussed project timeline via email.,2024-04-28T20:02:22
+806,70,1368,2022-02-09T20:02:22,In Person,Discussed security measures and protocols.,2024-07-27T20:02:22
+807,176,256,2023-08-08T20:02:22,In Person,Presentation on new product features.,2024-07-24T20:02:22
+808,154,1231,2022-11-04T20:02:22,Email,Sent client a report on project progress.,2024-07-23T20:02:22
+809,194,1672,2023-11-12T20:02:22,Event,Client invited to product launch event.,2024-05-23T20:02:22
+810,1,1237,2022-11-27T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-19T20:02:22
+811,169,956,2024-02-11T20:02:22,Email,Followed up on the status of the service request.,2024-05-07T20:02:22
+812,176,1483,2022-01-18T20:02:22,Email,Discussed project timeline via email.,2024-05-26T20:02:22
+813,53,767,2023-05-03T20:02:22,Email,Sent client a report on project progress.,2024-05-20T20:02:22
+814,157,1226,2023-03-30T20:02:22,Email,Followed up on the status of the service request.,2024-04-29T20:02:22
+815,153,1031,2022-05-20T20:02:22,Phone,Client called to find out account balance.,2024-04-27T20:02:22
+816,168,1465,2022-02-10T20:02:22,Email,Followed up on the status of the service request.,2024-05-11T20:02:22
+817,145,1582,2023-02-17T20:02:22,Event,Attended a tech conference with the client.,2024-05-30T20:02:22
+818,140,558,2023-10-19T20:02:22,Event,Attended a tech conference with the client.,2024-06-08T20:02:22
+819,134,509,2024-04-07T20:02:22,Phone,Answered client questions about the new policy.,2024-05-29T20:02:22
+820,188,1081,2024-02-27T20:02:22,Event,Client invited to product launch event.,2024-07-17T20:02:22
+821,160,1756,2023-03-08T20:02:22,In Person,Discussed security measures and protocols.,2024-05-10T20:02:22
+822,70,1368,2022-12-21T20:02:22,Event,Client invited to product launch event.,2024-05-06T20:02:22
+823,66,63,2024-04-20T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-24T20:02:22
+824,198,253,2022-11-03T20:02:22,Email,Sent client a report on project progress.,2024-08-01T20:02:22
+825,109,960,2022-07-14T20:02:22,Email,Followed up on the status of the service request.,2024-05-23T20:02:22
+826,20,215,2021-12-05T20:02:22,Phone,Answered client questions about the new policy.,2024-07-13T20:02:22
+827,65,223,2024-04-16T20:02:22,Event,Attended a tech conference with the client.,2024-06-15T20:02:22
+828,118,1397,2021-12-14T20:02:22,Email,Sent client a report on project progress.,2024-06-28T20:02:22
+829,3,1760,2023-06-23T20:02:22,Email,Client requested additional resources via email.,2024-05-29T20:02:22
+830,198,516,2022-11-21T20:02:22,In Person,Presentation on new product features.,2024-04-28T20:02:22
+831,141,490,2024-07-29T20:02:22,Email,Client requested additional resources via email.,2024-07-26T20:02:22
+832,154,1328,2021-12-06T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-05-08T20:02:22
+833,5,1508,2023-11-09T20:02:22,In Person,Presentation on new product features.,2024-05-29T20:02:22
+834,50,478,2024-01-07T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-06-11T20:02:22
+835,162,1844,2022-10-18T20:02:22,Email,Discussed project timeline via email.,2024-07-23T20:02:22
+836,178,1456,2022-08-05T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-29T20:02:22
+837,144,1339,2023-10-14T20:02:22,Event,Client attended a workshop on digital transformation.,2024-07-27T20:02:22
+838,62,1909,2022-05-20T20:02:22,Email,Sent client a report on project progress.,2024-06-19T20:02:22
+839,22,124,2022-11-23T20:02:22,Phone,Client called to find out account balance.,2024-05-14T20:02:22
+840,147,991,2023-02-14T20:02:22,Email,Followed up on the status of the service request.,2024-06-15T20:02:22
+841,156,930,2021-12-08T20:02:22,Event,Client invited to product launch event.,2024-06-21T20:02:22
+842,122,1239,2024-04-24T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-05-23T20:02:22
+843,139,897,2022-09-28T20:02:22,Email,Client requested additional resources via email.,2024-06-15T20:02:22
+844,94,732,2023-10-19T20:02:22,Phone,Answered client questions about the new policy.,2024-06-15T20:02:22
+845,7,1630,2022-09-14T20:02:22,Email,Followed up on the status of the service request.,2024-04-30T20:02:22
+846,117,1166,2021-12-29T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-02T20:02:22
+847,139,752,2024-02-18T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-14T20:02:22
+848,137,1994,2022-08-06T20:02:22,Event,Client invited to product launch event.,2024-05-14T20:02:22
+849,25,134,2022-09-12T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-17T20:02:22
+850,119,1288,2022-06-25T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-11T20:02:22
+851,64,1004,2024-01-24T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-30T20:02:22
+852,64,1923,2022-03-29T20:02:22,Email,Followed up on the status of the service request.,2024-05-08T20:02:22
+853,82,988,2023-07-30T20:02:22,Phone,Scheduled a demo for the new software.,2024-05-12T20:02:22
+854,6,1797,2022-11-26T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-08T20:02:22
+855,26,323,2024-03-27T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-13T20:02:22
+856,187,904,2024-06-26T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-01T20:02:22
+857,179,62,2023-09-15T20:02:22,Email,Discussed project timeline via email.,2024-07-16T20:02:22
+858,157,287,2022-11-15T20:02:22,In Person,Discussed security measures and protocols.,2024-06-01T20:02:22
+859,83,1299,2023-10-15T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-06T20:02:22
+860,84,327,2024-07-31T20:02:22,Event,Attended a tech conference with the client.,2024-07-07T20:02:22
+861,76,857,2024-02-28T20:02:22,Email,Sent client a report on project progress.,2024-05-16T20:02:22
+862,196,1783,2023-07-22T20:02:22,Event,Client invited to product launch event.,2024-05-29T20:02:22
+863,62,1909,2022-02-17T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-06T20:02:22
+864,90,1567,2023-04-10T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-28T20:02:22
+865,162,82,2022-06-25T20:02:22,Email,Sent client a report on project progress.,2024-05-10T20:02:22
+866,41,1784,2022-02-01T20:02:22,Phone,Client called to find out account balance.,2024-07-28T20:02:22
+867,162,438,2022-08-28T20:02:22,Phone,Client called to find out account balance.,2024-06-08T20:02:22
+868,38,1569,2022-04-25T20:02:22,Event,Client attended a workshop on digital transformation.,2024-05-20T20:02:22
+869,157,908,2022-05-02T20:02:22,In Person,Presentation on new product features.,2024-07-16T20:02:22
+870,141,1533,2022-08-11T20:02:22,Phone,Client called to find out account balance.,2024-07-02T20:02:22
+871,38,1685,2024-02-08T20:02:22,Email,Sent client a report on project progress.,2024-04-29T20:02:22
+872,194,1777,2022-01-25T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-12T20:02:22
+873,25,134,2022-01-26T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-06-20T20:02:22
+874,15,719,2022-12-11T20:02:22,Phone,Answered client questions about the new policy.,2024-06-11T20:02:22
+875,148,1499,2023-08-22T20:02:22,Email,Discussed project timeline via email.,2024-06-19T20:02:22
+876,171,1658,2023-08-12T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-25T20:02:22
+877,14,647,2022-08-13T20:02:22,Event,Client invited to product launch event.,2024-08-04T20:02:22
+878,84,335,2022-10-02T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-06T20:02:22
+879,26,1087,2024-03-07T20:02:22,Email,Discussed project timeline via email.,2024-06-14T20:02:22
+880,86,1715,2023-04-09T20:02:22,Phone,Client called to find out account balance.,2024-05-25T20:02:22
+881,80,1736,2022-07-10T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-06-12T20:02:22
+882,35,1787,2023-04-03T20:02:22,In Person,Presentation on new product features.,2024-06-29T20:02:22
+883,44,1080,2022-07-20T20:02:22,Email,Sent client a report on project progress.,2024-06-08T20:02:22
+884,25,206,2022-07-15T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-08-03T20:02:22
+885,138,1353,2024-07-04T20:02:22,Event,Client attended a workshop on digital transformation.,2024-07-03T20:02:22
+886,140,697,2022-08-09T20:02:22,Email,Followed up on the status of the service request.,2024-06-04T20:02:22
+887,102,68,2022-04-02T20:02:22,Phone,Answered client questions about the new policy.,2024-07-01T20:02:22
+888,131,1468,2023-05-22T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-26T20:02:22
+889,8,364,2021-12-22T20:02:22,Email,Sent client a report on project progress.,2024-07-01T20:02:22
+890,171,1335,2022-11-01T20:02:22,Event,Attended a tech conference with the client.,2024-06-11T20:02:22
+891,124,1474,2022-01-21T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-01T20:02:22
+892,15,1284,2022-02-25T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-01T20:02:22
+893,47,1078,2024-08-04T20:02:22,Event,Client attended a workshop on digital transformation.,2024-08-03T20:02:22
+894,140,317,2024-06-08T20:02:22,Email,Followed up on the status of the service request.,2024-05-23T20:02:22
+895,53,248,2023-10-01T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-05-22T20:02:22
+896,185,514,2023-09-27T20:02:22,In Person,Presentation on new product features.,2024-06-17T20:02:22
+897,151,78,2023-03-13T20:02:22,Email,Client requested additional resources via email.,2024-06-07T20:02:22
+898,193,1493,2024-04-11T20:02:22,Phone,Answered client questions about the new policy.,2024-06-11T20:02:22
+899,23,729,2023-07-04T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-01T20:02:22
+900,163,242,2023-07-14T20:02:22,Event,Attended a tech conference with the client.,2024-06-29T20:02:22
+901,154,1259,2022-06-16T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-05-02T20:02:22
+902,146,1779,2024-03-26T20:02:22,Email,Discussed project timeline via email.,2024-06-08T20:02:22
+903,32,1047,2022-02-05T20:02:22,Email,Client requested additional resources via email.,2024-06-08T20:02:22
+904,131,587,2024-06-22T20:02:22,Email,Sent client a report on project progress.,2024-07-08T20:02:22
+905,77,1315,2024-03-24T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-03T20:02:22
+906,136,1652,2024-05-22T20:02:22,Email,Client requested additional resources via email.,2024-05-11T20:02:22
+907,2,125,2023-10-15T20:02:22,In Person,Discussed security measures and protocols.,2024-06-10T20:02:22
+908,164,1379,2022-04-21T20:02:22,Phone,Client called to find out account balance.,2024-06-11T20:02:22
+909,174,612,2022-04-01T20:02:22,In Person,Presentation on new product features.,2024-06-24T20:02:22
+910,10,389,2022-07-15T20:02:22,Event,Client invited to product launch event.,2024-05-02T20:02:22
+911,12,416,2023-02-17T20:02:22,Phone,Client called to find out account balance.,2024-07-04T20:02:22
+912,176,1483,2022-03-20T20:02:22,In Person,Met client to discuss upcoming IT project.,2024-07-17T20:02:22
+913,150,1842,2023-07-31T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-06-04T20:02:22
+914,162,1549,2023-07-30T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-12T20:02:22
+915,26,1417,2021-11-10T20:02:22,Email,Sent client a report on project progress.,2024-05-12T20:02:22
+916,138,1104,2022-02-20T20:02:22,Event,Client attended a workshop on digital transformation.,2024-05-14T20:02:22
+917,3,1760,2023-02-02T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-04-29T20:02:22
+918,130,1922,2023-08-14T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-05-13T20:02:22
+919,187,904,2023-04-23T20:02:22,Email,Client requested additional resources via email.,2024-06-12T20:02:22
+920,135,231,2023-11-23T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-05-09T20:02:22
+921,44,1080,2024-06-21T20:02:22,Email,Discussed project timeline via email.,2024-04-30T20:02:22
+922,68,1324,2022-10-22T20:02:22,Email,Discussed project timeline via email.,2024-05-06T20:02:22
+923,82,1449,2022-04-30T20:02:22,Email,Client requested additional resources via email.,2024-05-18T20:02:22
+924,71,843,2023-02-26T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-06T20:02:22
+925,21,1889,2022-10-05T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-15T20:02:22
+926,17,570,2022-09-01T20:02:22,Email,Discussed project timeline via email.,2024-07-03T20:02:22
+927,22,1225,2023-06-01T20:02:22,Event,Attended a tech conference with the client.,2024-07-19T20:02:22
+928,144,106,2023-12-14T20:02:22,Email,Sent client a report on project progress.,2024-05-05T20:02:22
+929,52,211,2022-01-14T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-08-02T20:02:22
+930,105,941,2022-07-10T20:02:22,Event,Client invited to product launch event.,2024-05-10T20:02:22
+931,93,1462,2024-07-22T20:02:22,Email,Sent client a report on project progress.,2024-06-06T20:02:22
+932,52,777,2023-09-18T20:02:22,In Person,Discussed security measures and protocols.,2024-07-10T20:02:22
+933,156,816,2021-11-13T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-28T20:02:22
+934,20,521,2022-04-11T20:02:22,Email,Client requested additional resources via email.,2024-05-28T20:02:22
+935,56,1655,2023-04-24T20:02:22,Phone,Client called to find out account balance.,2024-07-31T20:02:22
+936,98,1145,2022-10-30T20:02:22,Email,Sent client a report on project progress.,2024-05-24T20:02:22
+937,86,765,2022-01-26T20:02:22,Email,Sent client a report on project progress.,2024-06-30T20:02:22
+938,137,1733,2023-12-11T20:02:22,Event,Client invited to product launch event.,2024-06-01T20:02:22
+939,130,1957,2023-09-07T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-07-22T20:02:22
+940,172,1629,2023-08-03T20:02:22,Phone,Client called to find out account balance.,2024-04-28T20:02:22
+941,86,1729,2024-05-15T20:02:22,Phone,Client called to find out account balance.,2024-07-29T20:02:22
+942,138,60,2023-03-30T20:02:22,In Person,Presentation on new product features.,2024-07-24T20:02:22
+943,143,457,2022-10-29T20:02:22,Email,Sent client a report on project progress.,2024-06-19T20:02:22
+944,185,760,2022-10-06T20:02:22,In Person,Presentation on new product features.,2024-07-09T20:02:22
+945,100,954,2023-12-29T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-13T20:02:22
+946,171,224,2023-03-17T20:02:22,Event,Attended a tech conference with the client.,2024-07-29T20:02:22
+947,38,1734,2023-04-02T20:02:22,In Person,Presentation on new product features.,2024-07-05T20:02:22
+948,47,309,2024-04-28T20:02:22,Phone,Answered client questions about the new policy.,2024-07-08T20:02:22
+949,198,253,2023-09-10T20:02:22,Phone,Client called to find out account balance.,2024-06-13T20:02:22
+950,168,307,2022-12-16T20:02:22,Email,Discussed project timeline via email.,2024-05-03T20:02:22
+951,154,1644,2023-11-19T20:02:22,Phone,Client called to find out account balance.,2024-06-05T20:02:22
+952,148,1219,2022-09-04T20:02:22,In Person,Discussed security measures and protocols.,2024-04-28T20:02:22
+953,191,759,2022-12-11T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-23T20:02:22
+954,118,855,2022-11-15T20:02:22,In Person,Presentation on new product features.,2024-08-03T20:02:22
+955,196,1783,2022-11-25T20:02:22,In Person,Presentation on new product features.,2024-06-13T20:02:22
+956,177,1330,2021-11-13T20:02:22,Phone,Client called to find out account balance.,2024-06-07T20:02:22
+957,129,1198,2023-06-08T20:02:22,Email,Followed up on the status of the service request.,2024-06-19T20:02:22
+958,108,1398,2024-04-22T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-08-03T20:02:22
+959,52,1801,2023-12-13T20:02:22,Phone,Client called to find out account balance.,2024-07-13T20:02:22
+960,114,883,2024-02-11T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-05-30T20:02:22
+961,72,1118,2022-12-23T20:02:22,Phone,Scheduled a demo for the new software.,2024-07-23T20:02:22
+962,43,944,2022-06-12T20:02:22,Email,Sent client a report on project progress.,2024-05-21T20:02:22
+963,181,1123,2022-06-14T20:02:22,Phone,Client called to find out account balance.,2024-05-09T20:02:22
+964,12,74,2022-07-24T20:02:22,In Person,Discussed security measures and protocols.,2024-06-16T20:02:22
+965,191,556,2024-03-17T20:02:22,Email,Sent client a report on project progress.,2024-07-20T20:02:22
+966,94,864,2023-07-16T20:02:22,Phone,Answered client questions about the new policy.,2024-07-14T20:02:22
+967,23,763,2022-01-06T20:02:22,Email,Client requested additional resources via email.,2024-06-19T20:02:22
+968,83,1646,2023-11-30T20:02:22,Phone,Client called to find out account balance.,2024-07-02T20:02:22
+969,31,1072,2024-05-09T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-07-26T20:02:22
+970,93,942,2022-04-15T20:02:22,In Person,Presentation on new product features.,2024-07-29T20:02:22
+971,145,627,2024-07-08T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-06-06T20:02:22
+972,126,876,2023-12-10T20:02:22,Event,Participated in a joint webinar on cybersecurity.,2024-06-12T20:02:22
+973,78,1719,2022-09-15T20:02:22,Email,Sent client a report on project progress.,2024-05-19T20:02:22
+974,6,1797,2022-01-29T20:02:22,Email,Client requested additional resources via email.,2024-07-19T20:02:22
+975,69,1628,2023-12-23T20:02:22,Email,Sent client a report on project progress.,2024-06-11T20:02:22
+976,91,582,2023-04-30T20:02:22,In Person,Presentation on new product features.,2024-07-15T20:02:22
+977,131,587,2023-02-15T20:02:22,In Person,Presentation on new product features.,2024-06-03T20:02:22
+978,179,420,2022-11-09T20:02:22,Event,Client attended a workshop on digital transformation.,2024-07-17T20:02:22
+979,196,430,2021-12-14T20:02:22,Email,Followed up on the status of the service request.,2024-06-12T20:02:22
+980,55,1963,2023-08-29T20:02:22,Phone,Scheduled a demo for the new software.,2024-05-06T20:02:22
+981,64,476,2024-04-29T20:02:22,Event,Client attended a workshop on digital transformation.,2024-05-17T20:02:22
+982,46,1161,2021-12-08T20:02:22,In Person,Presentation on new product features.,2024-05-15T20:02:22
+983,124,213,2022-12-18T20:02:22,Event,Attended a tech conference with the client.,2024-07-08T20:02:22
+984,140,697,2023-05-25T20:02:22,Email,Discussed project timeline via email.,2024-06-08T20:02:22
+985,62,878,2023-11-09T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-18T20:02:22
+986,6,739,2024-02-16T20:02:22,Event,Client attended a workshop on digital transformation.,2024-06-02T20:02:22
+987,194,1754,2024-03-20T20:02:22,Phone,Discussed system upgrade options over the phone.,2024-07-14T20:02:22
+988,110,1260,2021-11-10T20:02:22,Phone,Client called to find out account balance.,2024-05-07T20:02:22
+989,150,559,2022-03-13T20:02:22,Email,Sent client a report on project progress.,2024-05-09T20:02:22
+990,119,1288,2023-01-25T20:02:22,Email,Sent client a report on project progress.,2024-06-26T20:02:22
+991,69,122,2024-06-21T20:02:22,Email,Followed up on the status of the service request.,2024-05-01T20:02:22
+992,56,661,2023-04-11T20:02:22,Email,Followed up on the status of the service request.,2024-05-29T20:02:22
+993,75,1693,2021-12-16T20:02:22,Email,Discussed project timeline via email.,2024-06-19T20:02:22
+994,52,211,2022-11-02T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-24T20:02:22
+995,103,1622,2023-03-28T20:02:22,Event,Client invited to product launch event.,2024-06-22T20:02:22
+996,69,1308,2022-10-14T20:02:22,In Person,Presentation on new product features.,2024-05-25T20:02:22
+997,18,1141,2022-04-16T20:02:22,In Person,On-site meeting to review network infrastructure.,2024-06-01T20:02:22
+998,69,1628,2023-12-06T20:02:22,Email,Sent client a report on project progress.,2024-06-12T20:02:22
+999,145,422,2023-12-24T20:02:22,Phone,Scheduled a demo for the new software.,2024-04-28T20:02:22
+1000,96,397,2022-12-28T20:02:22,Phone,Scheduled a demo for the new software.,2024-06-15T20:02:22
