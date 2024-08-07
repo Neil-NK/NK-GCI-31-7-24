@@ -106,3 +106,39 @@ button:hover {
     background-color: #0056b3;
     border-color: #0056b3;
 }
+
+
+/* businesses.css */ 
+.search-and-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.search-and-button .form-control {
+    flex: 1;
+    margin-left: 15px; /* Space between the button and the input */
+}
+
+#voiceSearchBtn {
+    margin-left: 15px; /* Space between the input and the button */
+    background: #007bff; /* Primary background color */
+    color: white; /* Text color */
+    border: 1px solid #007bff; /* Border color matching the background */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#voiceSearchBtn i {
+    font-size: 20px; /* Icon size */
+}
+#voiceSearchBtn:hover {
+    background: #0056b3; /* Darker shade on hover */
+    border-color: #0056b3; /* Match border with background on hover */
+}
+#voiceSearchBtn:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.5); /* Custom focus outline */
+}
