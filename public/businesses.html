@@ -14,35 +14,51 @@
     <div class="container mt-4">
         <h1>Businesses</h1>
 
-        <div class="admin-section mb-4">
+        <!-- Note the 4 levels of Level1 Level2 Level3 Admin (and nonUser)-->
+        <div class="admin-section mb-4" data-role="Admin">
             <h3>Admin Actions</h3>
             <button class="btn btn-secondary" onclick="addDummyData('large')">Add Dummy Business Data</button>
             <button class="btn btn-secondary" onclick="addDummyData('small')">Add Small Dummy Business Data</button>
             <button class="btn btn-secondary" onclick="deleteAllBusinessData()">Delete All Business Data</button>
         </div>
-
-        <div class="search-and-button">
-            <button class="btn btn-primary" data-toggle="modal" data-target="#businessModal" onclick="resetBusinessForm()">Add New Business</button>
-            <input type="text" id="searchInput" class="form-control" placeholder="Search for businesses..." onkeyup="filterBusinesses()">
-            <button class="btn btn-secondary" id="voiceSearchBtn" title="Start Voice Search">
-                <i class="fas fa-microphone"></i> <!-- Font Awesome microphone icon -->
-            </button>
+        
+        <div class="row">
+            <div class="column">
+                <div class="add-new-business" data-role="Level2 Level3 Admin">
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#businessModal" onclick="resetBusinessForm()">Add New Business</button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="search-and-button" data-role="Level1 Level2 Level3 Admin">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search for businesses..." onkeyup="filterBusinesses()">
+                </div>
+            </div>
+            <div class="column">
+                <div class="search-and-button" data-role="Level1 Level2 Level3 Admin">
+                    <button class="btn btn-secondary" id="voiceSearchBtn" title="Start Voice Search">
+                        <i class="fas fa-microphone"></i> <!-- Font Awesome microphone icon -->
+                    </button>
+                </div>
+            </div>
         </div>
+        
+        
 
-        <table class="table table-bordered">
+        <table class="table table-bordered" data-role="Level1 Level2 Level3 Admin">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Business Name</th>
-                    <th>Contact Type</th>
-                    <th>Notes</th>
-                    <th>Actions</th>
+                    <th onclick="sortTable(0)">ID <span class="sort-arrow" id="sort-arrow-0"></span></th>
+                    <th onclick="sortTable(1)">Business Name <span class="sort-arrow" id="sort-arrow-1"></span></th>
+                    <th onclick="sortTable(2)">Contact Type <span class="sort-arrow" id="sort-arrow-2"></span></th>
+                    <th onclick="sortTable(3)">Notes <span class="sort-arrow" id="sort-arrow-3"></span></th>
+                    <th class="actions-column" data-role="Level3 Admin">Actions</th>
                 </tr>
             </thead>
             <tbody id="businessesTableBody">
                 <!-- Data will be inserted here -->
             </tbody>
         </table>
+        
     </div>
     <script src="navbar.js"></script>
 
@@ -79,6 +95,56 @@
 
     
     <script>
+    let sortDirection = {}; // Store the sort direction for each column
+    const defaultSortColumn = 0; // Change this to the index of the column you want to default sort
+    const defaultSortDirection = 'asc'; // Default sort direction ('asc' or 'desc')
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initial sort
+        sortDirection[defaultSortColumn] = defaultSortDirection;
+        sortTable(defaultSortColumn);
+    });
+
+    // Function to sort the table by column
+    function sortTable(columnIndex) {
+        const table = document.getElementById("businessesTableBody");
+        const rows = Array.from(table.rows);
+        const isAscending = sortDirection[columnIndex] === 'asc';
+        sortDirection[columnIndex] = isAscending ? 'desc' : 'asc';
+
+        const isNumericColumn = columnIndex === 0; // Assuming Business ID is in the first column (index 0)
+
+        const sortedRows = rows.sort((a, b) => {
+            const cellA = a.cells[columnIndex].innerText.toUpperCase();
+            const cellB = b.cells[columnIndex].innerText.toUpperCase();
+
+            const valueA = isNumericColumn ? parseFloat(cellA) : cellA;
+            const valueB = isNumericColumn ? parseFloat(cellB) : cellB;
+
+            if (valueA < valueB) {
+                return isAscending ? -1 : 1;
+            }
+            if (valueA > valueB) {
+                return isAscending ? 1 : -1;
+            }
+            return 0;
+        });
+
+        table.innerHTML = "";
+        sortedRows.forEach(row => table.appendChild(row));
+        updateSortArrows(columnIndex, sortDirection[columnIndex]);
+    }
+
+    // Function to update sort arrows
+    function updateSortArrows(columnIndex, direction) {
+        const arrows = document.querySelectorAll('.sort-arrow');
+        arrows.forEach(arrow => arrow.innerHTML = ''); // Clear all arrows
+
+        const currentArrow = document.getElementById(`sort-arrow-${columnIndex}`);
+        currentArrow.innerHTML = direction === 'asc' ? '&#9650;' : '&#9660;'; // Up or down arrow
+    }
+
+        
         // When the document is fully loaded, initialize the page
         document.addEventListener('DOMContentLoaded', function () {
             fetchBusinesses(); // Fetch and display businesses when the page loads
@@ -154,43 +220,49 @@
     
         // Helper function to generate action buttons HTML for each business row
         function getActionButtons(businessID) {
-            return `
-                <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td style="width: 50%; padding: 0; margin: 0;">
-                            <button class="btn btn-sm btn-warning" style="width: 100%; border: none; margin: 0;" onclick="editBusiness(${businessID})">Edit</button>
-                        </td>
-                        <td style="width: 50%; padding: 0; margin: 0;">
-                            <button class="btn btn-sm btn-danger" style="width: 100%; border: none; margin: 0;" onclick="deleteBusiness(${businessID})">Delete</button>
-                        </td>
-                    </tr>
-                </table>
-            `;
-        }
+    if (globalUserRole === 'Level3' || globalUserRole === 'Admin') {
+        return `
+            <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 50%; padding: 0; margin: 0;">
+                        <button class="btn btn-sm btn-warning" style="width: 100%; border: none; margin: 0;" onclick="editBusiness(${businessID})">Edit</button>
+                    </td>
+                    <td style="width: 50%; padding: 0; margin: 0;">
+                        <button class="btn btn-sm btn-danger" style="width: 100%; border: none; margin: 0;" onclick="deleteBusiness(${businessID})">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        `;
+    }
+    return '';  // Return an empty string if the user doesn't have the required role
+}
+
     
         // Function to filter businesses based on search input
         function filterBusinesses() {
-            const input = document.getElementById("searchInput");
-            const filter = input.value.toUpperCase().trim(); // Get the search term
-            const table = document.getElementById("businessesTableBody");
-            const tr = table.getElementsByTagName("tr");
-    
-            for (let i = 0; i < tr.length; i++) {
-                const tdArray = tr[i].getElementsByTagName("td");
-                let rowContainsFilter = false;
-    
-                let rowText = '';
-                for (let j = 0; j < tdArray.length; j++) {
-                    rowText += (tdArray[j].textContent || tdArray[j].innerText) + ' ';
-                }
-    
-                if (rowText.toUpperCase().includes(filter)) {
-                    rowContainsFilter = true;
-                }
-    
-                tr[i].style.display = rowContainsFilter ? "" : "none"; // Show or hide the row based on the filter
-            }
+    const input = document.getElementById("searchInput");
+    const filter = input.value.toUpperCase().trim();
+    const table = document.getElementById("businessesTableBody");
+    const tr = table.getElementsByTagName("tr");
+
+    for (let i = 0; i < tr.length; i++) {
+        const tdArray = tr[i].getElementsByTagName("td");
+        let rowContainsFilter = false;
+
+        // Create an array to hold all text content from the columns to search
+        let rowText = '';
+        for (let j = 0; j < tdArray.length; j++) {
+            rowText += (tdArray[j].textContent || tdArray[j].innerText) + ' ';
         }
+
+        // Check if the filter term is included in the concatenated text
+        if (rowText.toUpperCase().includes(filter)) {
+            rowContainsFilter = true;
+        }
+
+        tr[i].style.display = rowContainsFilter ? "" : "none";
+    }
+}
     
         // Function to edit a business, fetching business data and filling the form
         function editBusiness(businessID) {

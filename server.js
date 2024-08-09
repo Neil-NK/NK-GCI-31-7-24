@@ -5,6 +5,10 @@ const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
 const csv = require('csv-parser');
+const session = require('express-session');
+// const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
+
 
 const app = express();
 const port = 3000;
@@ -15,6 +19,64 @@ app.use(cors());
 
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret: 'your_secret_key',
+  resave: false,
+  saveUninitialized: true
+}));
+      
+// const db = new sqlite3.Database('./crm_database_UPDATED.db'); // Ensure db is declared only once
+
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+  db.get('SELECT * FROM Users WHERE username = ?', [username], (err, user) => { // Note: "Users" with uppercase "U"
+      if (err) {
+          return res.status(500).json({ success: false, message: 'Internal server error' });
+      }
+      if (!user || user.password !== password) { // Directly comparing plain text passwords
+        // if (!user || !bcrypt.compareSync(password, user.password)) {   // this line is for bcrypt which hides the password
+          return res.status(401).json({ success: false, message: 'Invalid username or password' });
+      }
+      req.session.userId = user.userID; // Assuming userID is the primary key
+      req.session.userRole = user.role; // Assuming your users table has a 'role' field
+      res.json({ success: true });
+  });
+});
+
+
+
+app.get('/logout', (req, res) => {
+    req.session.destroy();
+    res.redirect('/login.html');
+});
+
+app.get('/check-session', (req, res) => {
+  if (req.session.userId) {
+    db.get('SELECT username, role FROM Users WHERE userID = ?', [req.session.userId], (err, user) => {
+      if (err) {
+        return res.status(500).json({ loggedIn: false });
+      }
+      res.json({ loggedIn: true, username: user.username, userRole: user.role });
+    });
+  } else {
+    res.json({ loggedIn: false });
+  }
+});
+
+
+
+
+// Protect all routes except login
+app.use((req, res, next) => {
+  if (!req.session.userId && req.path !== '/login.html' && req.path !== '/login' && !req.path.startsWith('/public')) {
+    return res.redirect('/login.html');
+  }
+  next();
+});
+
+
+
 
 // Route to serve the index.html file
 app.get('/', (req, res) => {

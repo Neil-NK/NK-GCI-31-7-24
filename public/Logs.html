@@ -13,34 +13,44 @@
 
     <div class="container mt-4">
         <h1>Logs</h1>
-        <div class="admin-section mb-4">
+        <div class="admin-section mb-4" data-role="Admin">
             <h3>Admin Actions</h3>
-            
             <button class="btn btn-secondary" onclick="addDummyData('large')">Add Dummy Logs Data</button>
             <button class="btn btn-secondary" onclick="addDummyData('small')">Add Small Dummy Logs Data</button>
             <button class="btn btn-secondary" onclick="deleteAllLogsData()">Delete All Logs Data</button>
-
         </div>
 
-        <div class="search-and-button">
-            <button class="btn btn-primary" data-toggle="modal" data-target="#logModal" onclick="setDefaultLogDate(); resetLogsForm()">Add New Log</button>
-            <input type="text" id="searchInput" class="form-control" placeholder="Search for logs..." onkeyup="filterLogs()">
-            <button class="btn btn-secondary" id="voiceSearchBtn" title="Start Voice Search">
-                <i class="fas fa-microphone"></i> <!-- Font Awesome microphone icon -->
-            </button>
+        <div class="row">
+            <div class="column">
+                <div class="add-new-log" data-role="Level2 Level3 Admin">
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#logModal" onclick="setDefaultLogDate(); resetLogsForm()">Add New Log</button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="search-and-button" data-role="Level1 Level2 Level3 Admin">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search for logs..." onkeyup="filterLogs()">
+                </div>
+            </div>
+            <div class="column">
+                <div class="search-and-button" data-role="Level1 Level2 Level3 Admin">
+                    <button class="btn btn-secondary" id="voiceSearchBtn" title="Start Voice Search">
+                        <i class="fas fa-microphone"></i> <!-- Font Awesome microphone icon -->
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <table class="table table-bordered">
+        <table class="table table-bordered" data-role="Level1 Level2 Level3 Admin">
             <thead>
                 <tr>
-                    <th>Log ID</th>
-                    <th>Business Name</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Log Date</th>
-                    <th>Log Type</th>
-                    <th>Notes</th>
-                    <th>Actions</th>
+                    <th onclick="sortTable(0)">Log ID <span class="sort-arrow" id="sort-arrow-0">&#9650;</span></th>
+                    <th onclick="sortTable(1)">Business Name <span class="sort-arrow" id="sort-arrow-1"></span></th>
+                    <th onclick="sortTable(2)">First Name <span class="sort-arrow" id="sort-arrow-2"></span></th>
+                    <th onclick="sortTable(3)">Last Name <span class="sort-arrow" id="sort-arrow-3"></span></th>
+                    <th onclick="sortTable(4)">Log Date <span class="sort-arrow" id="sort-arrow-4"></span></th>
+                    <th onclick="sortTable(5)">Log Type <span class="sort-arrow" id="sort-arrow-5"></span></th>
+                    <th onclick="sortTable(6)">Notes <span class="sort-arrow" id="sort-arrow-6"></span></th>
+                    <th class="actions-column" data-role="Level3 Admin">Actions</th>
                 </tr>
             </thead>
             <tbody id="logsTableBody">
@@ -96,6 +106,57 @@
     </div>
 
     <script>
+
+let sortDirection = {}; // Store the sort direction for each column
+    const defaultSortColumn = 0; // Change this to the index of the column you want to default sort
+    const defaultSortDirection = 'asc'; // Default sort direction ('asc' or 'desc')
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initial sort
+        sortDirection[defaultSortColumn] = defaultSortDirection;
+        sortTable(defaultSortColumn);
+    });
+
+    // Function to sort the table by column
+    function sortTable(columnIndex) {
+        const table = document.getElementById("logsTableBody");
+        const rows = Array.from(table.rows);
+        const isAscending = sortDirection[columnIndex] === 'asc';
+        sortDirection[columnIndex] = isAscending ? 'desc' : 'asc';
+
+        const isNumericColumn = columnIndex === 0; // Assuming Log ID is in the first column (index 0)
+
+        const sortedRows = rows.sort((a, b) => {
+            const cellA = a.cells[columnIndex].innerText.toUpperCase();
+            const cellB = b.cells[columnIndex].innerText.toUpperCase();
+
+            const valueA = isNumericColumn ? parseFloat(cellA) : cellA;
+            const valueB = isNumericColumn ? parseFloat(cellB) : cellB;
+
+            if (valueA < valueB) {
+                return isAscending ? -1 : 1;
+            }
+            if (valueA > valueB) {
+                return isAscending ? 1 : -1;
+            }
+            return 0;
+        });
+
+        table.innerHTML = "";
+        sortedRows.forEach(row => table.appendChild(row));
+        updateSortArrows(columnIndex, sortDirection[columnIndex]);
+    }
+
+    // Function to update sort arrows
+    function updateSortArrows(columnIndex, direction) {
+        const arrows = document.querySelectorAll('.sort-arrow');
+        arrows.forEach(arrow => arrow.innerHTML = ''); // Clear all arrows
+
+        const currentArrow = document.getElementById(`sort-arrow-${columnIndex}`);
+        currentArrow.innerHTML = direction === 'asc' ? '&#9650;' : '&#9660;'; // Up or down arrow
+    }
+
+
         // Initialize the page and set up event listeners
         document.addEventListener('DOMContentLoaded', function () {
             fetchLogsWithDetails(); // Fetch and display logs
@@ -180,45 +241,49 @@
     
         // Helper function to generate action buttons for each log row
         function getActionButtons(logID) {
-            return `
-                <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td style="width: 50%; padding: 0; margin: 0;">
-                            <button class="btn btn-sm btn-warning" style="width: 100%; border: none; margin: 0;" onclick="editLog(${logID})">Edit</button>
-                        </td>
-                        <td style="width: 50%; padding: 0; margin: 0;">
-                            <button class="btn btn-sm btn-danger" style="width: 100%; border: none; margin: 0;" onclick="deleteLog(${logID})">Delete</button>
-                        </td>
-                    </tr>
-                </table>
-            `;
-        }
+    if (globalUserRole === 'Level3' || globalUserRole === 'Admin') {
+        return `
+            <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width: 50%; padding: 0; margin: 0;">
+                        <button class="btn btn-sm btn-warning" style="width: 100%; border: none; margin: 0;" onclick="editLog(${logID})">Edit</button>
+                    </td>
+                    <td style="width: 50%; padding: 0; margin: 0;">
+                        <button class="btn btn-sm btn-danger" style="width: 100%; border: none; margin: 0;" onclick="deleteLog(${logID})">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        `;
+    }
+    return '';  // Return an empty string if the user doesn't have the required role
+}
+
     
         // Function to filter logs based on search input
         function filterLogs() {
-            const input = document.getElementById('searchInput');
-            const filter = input.value.toUpperCase();
-            const table = document.getElementById('logsTableBody');
-            const tr = table.getElementsByTagName('tr');
-    
-            for (let i = 0; i < tr.length; i++) {
-                const tdArray = tr[i].getElementsByTagName('td');
-                let rowContainsFilter = false;
-    
-                for (let j = 0; j < tdArray.length - 1; j++) {
-                    const td = tdArray[j];
-                    if (td) {
-                        const txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().includes(filter)) {
-                            rowContainsFilter = true;
-                            break;
-                        }
-                    }
-                }
-    
-                tr[i].style.display = rowContainsFilter ? '' : 'none';
-            }
+    const input = document.getElementById("searchInput");
+    const filter = input.value.toUpperCase().trim();
+    const table = document.getElementById("logsTableBody");
+    const tr = table.getElementsByTagName("tr");
+
+    for (let i = 0; i < tr.length; i++) {
+        const tdArray = tr[i].getElementsByTagName("td");
+        let rowContainsFilter = false;
+
+        // Create an array to hold all text content from the columns to search
+        let rowText = '';
+        for (let j = 0; j < tdArray.length; j++) {
+            rowText += (tdArray[j].textContent || tdArray[j].innerText) + ' ';
         }
+
+        // Check if the filter term is included in the concatenated text
+        if (rowText.toUpperCase().includes(filter)) {
+            rowContainsFilter = true;
+        }
+
+        tr[i].style.display = rowContainsFilter ? "" : "none";
+    }
+}
     
         // Function to edit a log, fetching log data and filling the form
         function editLog(logID) {
